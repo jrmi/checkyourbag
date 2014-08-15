@@ -1,0 +1,662 @@
+{
+    "categories":[
+        {
+            "label": "Documents importants",
+            "items": [
+                {
+                    "label": "Carte d'identité",
+                    "description": "..."
+                },
+                {
+                    "label": "Passeport",
+                    "description": "..."
+                },
+                {
+                    "label": "Visa",
+                    "description": "..."
+                },
+                {
+                    "label": "Carnet de vaccination",
+                    "description": "..."
+                },
+                {
+                    "label": "Permis Voiture/Moto/Bateau",
+                    "description": "..."
+                },
+                {
+                    "label": "Carte étudiant/chomeur",
+                    "description": "..."
+                }
+            ]
+        },
+        {
+            "label":"Moyens de paiement",
+            "items": [
+                {
+                    "label": "Carte bleue",
+                    "description": "..."
+                },
+                {
+                    "label": "Chéquier",
+                    "description": "..."
+                },
+                {
+                    "label": "Devises étrangères",
+                    "description": "..."
+                },
+                {
+                    "label": "Monnaie",
+                    "description": "..."
+                }
+            ]
+        },
+        {
+            "label":"Transport",
+            "items": [
+                {
+                    "label": "Billets Avion/Train/Bus",
+                    "description": "..."
+                },
+                {
+                    "label": "Clefs de voiture",
+                    "description": "..."
+                },
+                {
+                    "label": "Cartes de réduction",
+                    "description": "..."
+                }
+            ]
+        },
+        {
+            "label":"Clefs",
+            "items": [
+                {
+                    "label": "Clefs de chez soi",
+                    "description": "..."
+                },
+                {
+                    "label": "Clefs de la destination",
+                    "description": "..."
+                }
+            ]
+        },
+        {
+            "label":"Sous vêtements",
+            "items": [
+                {
+                    "label": "Culottes/Caleçons",
+                    "description": "..."
+                },
+                {
+                    "label": "Chausettes",
+                    "description": "..."
+                },
+                {
+                    "label": "Soutien-gorge",
+                    "description": "..."
+                },
+                {
+                    "label": "Pyjama",
+                    "description": "..."
+                },
+                {
+                    "label": "Maillot de bain",
+                    "description": "..."
+                },
+                {
+                    "label": "Ceinture",
+                    "description": "..."
+                }
+            ]
+        },
+        {
+            "label":"Vêtements haut",
+            "items": [
+                {
+                    "label": "Pulls",
+                    "description": "..."
+                },
+                {
+                    "label": "T-shirt",
+                    "description": "..."
+                },
+                {
+                    "label": "Chemise",
+                    "description": "..."
+                },
+                {
+                    "label": "Veste",
+                    "description": "..."
+                },
+                {
+                    "label": "Polaire",
+                    "description": "..."
+                },
+                {
+                    "label": "Écharpe",
+                    "description": "..."
+                },
+                {
+                    "label": "Manteau",
+                    "description": "..."
+                }
+            ]
+        },
+        {
+            "label":"Vêtements bas",
+            "items": [
+                {
+                    "label": "Pantalons",
+                    "description": "..."
+                },
+                {
+                    "label": "Short",
+                    "description": "..."
+                },
+                {
+                    "label": "combinaison de ski",
+                    "description": "..."
+                }
+            ]
+        },
+        {
+            "label":"Pour la tête",
+            "items": [
+                {
+                    "label": "Chapeau",
+                    "description": "..."
+                },
+                {
+                    "label": "Bonnet",
+                    "description": "..."
+                },
+                {
+                    "label": "Élastiques pour cheveux",
+                    "description": "..."
+                },
+                {
+                    "label": "Barettes",
+                    "description": "..."
+                },
+                {
+                    "label": "Lunettes/Lentilles",
+                    "description": "..."
+                },
+                {
+                    "label": "Casquette",
+                    "description": "..."
+                }
+            ]
+        },
+        {
+            "label":"Se chausser",
+            "items": [
+                {
+                    "label": "Chaussures de ville",
+                    "description": "..."
+                },
+                {
+                    "label": "Chaussures sports",
+                    "description": "..."
+                },
+                {
+                    "label": "Chaussures d'eau",
+                    "description": "..."
+                },
+                {
+                    "label": "Chaussons/claquettes",
+                    "description": "..."
+                },
+                {
+                    "label": "Bottes",
+                    "description": "..."
+                },
+                {
+                    "label": "Boots",
+                    "description": "..."
+                }
+            ]
+        },
+        {
+            "label":"Pour la pluie",
+            "items": [
+                {
+                    "label": "Veste de pluie",
+                    "description": "..."
+                },
+                {
+                    "label": "Cape de pluie",
+                    "description": "..."
+                },
+                {
+                    "label": "Parapluie",
+                    "description": "..."
+                }
+            ]
+        },
+        {
+            "label":"Se laver",
+            "items": [
+                {
+                    "label": "Savon",
+                    "description": "..."
+                },
+                {
+                    "label": "Shampoing/Après",
+                    "description": "..."
+                },
+                {
+                    "label": "Cotons tiges",
+                    "description": "..."
+                },
+                {
+                    "label": "Brosse à dent",
+                    "description": "..."
+                },
+                {
+                    "label": "Dentifrice",
+                    "description": "..."
+                },
+                {
+                    "label": "Serviettes",
+                    "description": "..."
+                }
+            ]
+        },
+        {
+            "label":"Cosmétiques",
+            "items":[
+                {
+                    "label": "Déodorant",
+                    "description": "..."
+                },
+                {
+                    "label": "Parfum",
+                    "description": "..."
+                },
+                {
+                    "label": "Maquillage/Démaquillant",
+                    "description": "..."
+                },
+                {
+                    "label": "Baume à lèvres",
+                    "description": "..."
+                },
+                {
+                    "label": "Gel/Laque",
+                    "description": "..."
+                },
+                {
+                    "label": "Gel de rasage",
+                    "description": "..."
+                },
+                {
+                    "label": "Savon",
+                    "description": "..."
+                },
+                {
+                    "label": "Sac pour linge sale",
+                    "description": "..."
+                }
+            ]
+        },
+        {
+            "label":"Dans la trousse de toillette",
+            "items":[
+                {
+                    "label": "Coupe ongles",
+                    "description": "..."
+                },
+                {
+                    "label": "Pince à épiler",
+                    "description": "..."
+                },
+                {
+                    "label": "Mouchoirs",
+                    "description": "..."
+                },
+                {
+                    "label": "Papier toilette",
+                    "description": "..."
+                },
+                {
+                    "label": "Ciseaux",
+                    "description": "..."
+                },
+                {
+                    "label": "Bouchons d'oreilles",
+                    "description": "..."
+                },
+                {
+                    "label": "Peigne/Brosse",
+                    "description": "..."
+                },
+                {
+                    "label": "Serviettes hygièniques/Tampon",
+                    "description": "..."
+                },
+                {
+                    "label": "Rasoirs/Tondeuse",
+                    "description": "..."
+                },
+                {
+                    "label": "Épilateur",
+                    "description": "..."
+                }
+            ]
+        },
+        {
+            "label":"Médicaments",
+            "items": [
+                {
+                    "label": "Contre le mal de tête",
+                    "description": "..."
+                },
+                {
+                    "label": "Anti-diahréeique",
+                    "description": "..."
+                },
+                {
+                    "label": "Antibiotiques",
+                    "description": "..."
+                },
+                {
+                    "label": "Ordonnances en cours",
+                    "description": "..."
+                },
+                {
+                    "label": "Anti-paludique",
+                    "description": "..."
+                },
+                {
+                    "label": "Pour les brulures",
+                    "description": "..."
+                }
+            ]
+        },
+        {
+            "label":"Santé/Protection",
+            "items":[
+                {
+                    "label": "Désinfectant",
+                    "description": "..."
+                },
+                {
+                    "label": "Crème solaire",
+                    "description": "..."
+                },
+                {
+                    "label": "Pansements",
+                    "description": "..."
+                },
+                {
+                    "label": "Anti-ampoules",
+                    "description": "..."
+                },
+                {
+                    "label": "Bandages",
+                    "description": "..."
+                },
+                {
+                    "label": "Sérum physiologique",
+                    "description": "..."
+                },
+                {
+                    "label": "Pastilles purifiantes pour l'eau",
+                    "description": "..."
+                },
+                {
+                    "label": "Pillule",
+                    "description": "..."
+                },
+                {
+                    "label": "Préservatifs",
+                    "description": "..."
+                }
+            ]
+        },
+        {
+            "label":"Les moustiques et les maladies",
+            "items": [
+                {
+                    "label": "Spray anti-moustiques",
+                    "description": "..."
+                },
+                {
+                    "label": "Traitement des boutons",
+                    "description": "..."
+                },
+                {
+                    "label": "Moustiquaires",
+                    "description": "..."
+                },
+                {
+                    "label": "Serpentins",
+                    "description": "..."
+                }
+            ]
+        },
+        {
+            "label":"Matériel électronique",
+            "items": [
+                {
+                    "label": "Réveil",
+                    "description": "..."
+                },
+                {
+                    "label": "Mobile/Tablette",
+                    "description": "..."
+                },
+                {
+                    "label": "Apareil photo/Caméra",
+                    "description": "..."
+                },
+                {
+                    "label": "Clefs USB",
+                    "description": "..."
+                },
+                {
+                    "label": "Navigateur GPS",
+                    "description": "..."
+                },
+                {
+                    "label": "Ordinateur portable",
+                    "description": "..."
+                },
+                {
+                    "label": "Lampe de poche/Frontale",
+                    "description": "..."
+                },
+                {
+                    "label": "Console de jeux",
+                    "description": "..."
+                },
+                {
+                    "label": "Adaptateur universel",
+                    "description": "..."
+                },
+                {
+                    "label": "Chargeurs",
+                    "description": "..."
+                },
+                {
+                    "label": "Piles/Batteries",
+                    "description": "..."
+                }
+            ]
+        },
+        {
+            "label":"Alimentation",
+            "items": [
+                {
+                    "label": "Couverts/Vaiselle",
+                    "description": "..."
+                },
+                {
+                    "label": "Nourriture",
+                    "description": "..."
+                },
+                {
+                    "label": "Gourde/Bouteille",
+                    "description": "..."
+                },
+                {
+                    "label": "Glacière",
+                    "description": "..."
+                }
+            ]
+        },
+        {
+            "label":"Pour dormir",
+            "items": [
+                {
+                    "label": "Duvet",
+                    "description": "..."
+                },
+                {
+                    "label": "Oreiller",
+                    "description": "..."
+                },
+                {
+                    "label": "Sac à viande",
+                    "description": "..."
+                }
+            ]
+        },
+        {
+            "label":"Randonnée",
+            "items": [
+                {
+                    "label": "Tente",
+                    "description": "..."
+                },
+                {
+                    "label": "Bâtons de marche",
+                    "description": "..."
+                },
+                {
+                    "label": "Matelas de sol",
+                    "description": "..."
+                },
+                {
+                    "label": "Réchaud",
+                    "description": "..."
+                }
+            ]
+        },
+        {
+            "label":"Loisirs",
+            "items": [
+                {
+                    "label": "Livres",
+                    "description": "..."
+                },
+                {
+                    "label": "Jeux de société",
+                    "description": "..."
+                },
+                {
+                    "label": "Papier et stylos",
+                    "description": "..."
+                },
+                {
+                    "label": "Carnet de voyage",
+                    "description": "..."
+                }
+            ]
+        },
+        {
+            "label":"Se repérer",
+            "items": [
+                {
+                    "label": "Itinéraire",
+                    "description": "..."
+                },
+                {
+                    "label": "Cartes",
+                    "description": "..."
+                },
+                {
+                    "label": "Atlas routier",
+                    "description": "..."
+                },
+                {
+                    "label": "Guides touristiques",
+                    "description": "..."
+                }
+            ]
+        },
+        {
+            "label":"Pour les autres",
+            "items": [
+                {
+                    "label": "Cadeaux",
+                    "description": "..."
+                },
+                {
+                    "label": "Carnet d'adresse",
+                    "description": "..."
+                },
+                {
+                    "label": "Cartes postales et timbres",
+                    "description": "..."
+                },
+                {
+                    "label": "Timbres",
+                    "description": "..."
+                }
+                
+            ]
+        },
+        {
+            "label":"Toujours utile",
+            "items": [
+                {
+                    "label": "Couteau",
+                    "description": "..."
+                },
+                {
+                    "label": "Jumelles",
+                    "description": "..."
+                },
+                {
+                    "label": "Briquet",
+                    "description": "..."
+                },
+                {
+                    "label": "Corde",
+                    "description": "..."
+                },
+                {
+                    "label": "Sacs en plastiques",
+                    "description": "..."
+                },
+                {
+                    "label": "Sacs poubelle",
+                    "description": "..."
+                }
+            ]
+        },
+        {
+            "label": "Avant de partir",
+            "items": [
+                {
+                    "label": "Arroser les plantes",
+                    "description": "..."
+                },
+                {
+                    "label": "Vider les poubelles",
+                    "description": "..."
+                },
+                {
+                    "label": "Couper gaz/eau/électricité",
+                    "description": "..."
+                },
+                {
+                    "label": "Révision du véhicule",
+                    "description": "..."
+                }
+            ]
+        }
+    ]
+}
