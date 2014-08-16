@@ -18,7 +18,8 @@ module.exports = function (grunt) {
     // Configurable paths
     var config = {
         app: 'app',
-        dist: 'dist'
+        dist: 'dist',
+        release: 'release'
     };
 
     // Define the configuration for all the tasks
@@ -342,7 +343,25 @@ module.exports = function (grunt) {
                 'imagemin',
                 'svgmin'
             ]
+        },
+
+        compress: {
+            main: {
+                options: {
+                    mode: 'zip',
+                    archive: 'release/checkyourbag.zip'
+                },
+                files: [
+                    {
+                        expand: true,
+                        cwd: '<%= config.dist %>',
+                        src: ['**/**'],
+                        dest: '/'
+                    }
+                ]
+            },
         }
+        
     });
 
 
@@ -399,4 +418,11 @@ module.exports = function (grunt) {
         'test',
         'build'
     ]);
+
+
+    grunt.registerTask('release', function () {
+        grunt.task.run([
+            'compress'
+        ]);
+    });
 };
