@@ -33,7 +33,7 @@
             "label":"Moyens de paiement",
             "items": [
                 {
-                    "label": "Carte bleue",
+                    "label": "Carte de crédit",
                     "description": "..."
                 },
                 {
@@ -179,11 +179,7 @@
                     "description": "..."
                 },
                 {
-                    "label": "Élastiques pour cheveux",
-                    "description": "..."
-                },
-                {
-                    "label": "Barettes",
+                    "label": "Élastiques / Pinces",
                     "description": "..."
                 },
                 {
@@ -369,7 +365,7 @@
                     "description": "..."
                 },
                 {
-                    "label": "Pour les brulures",
+                    "label": "Pour les brûlures",
                     "description": "..."
                 }
             ]

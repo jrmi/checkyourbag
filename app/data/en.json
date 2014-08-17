@@ -4,7 +4,7 @@
             "label": "Official documents",
             "items": [
                 {
-                    "label": "Identity card",
+                    "label": "ID card",
                     "description": "..."
                 },
                 {
@@ -16,104 +16,104 @@
                     "description": "..."
                 },
                 {
-                    "label": "Carnet de vaccination",
+                    "label": "Vaccination book",
                     "description": "..."
                 },
                 {
-                    "label": "Permis Voiture/Moto/Bateau",
+                    "label": "Driving licence",
                     "description": "..."
                 },
                 {
-                    "label": "Carte étudiant/chomeur",
+                    "label": "Student/Teacher card",
                     "description": "..."
                 }
             ]
         },
         {
-            "label":"Moyens de paiement",
+            "label":"Payment",
             "items": [
                 {
-                    "label": "Carte bleue",
+                    "label": "Credit card",
                     "description": "..."
                 },
                 {
-                    "label": "Chéquier",
+                    "label": "Checks",
                     "description": "..."
                 },
                 {
-                    "label": "Devises étrangères",
+                    "label": "Foreign currency",
                     "description": "..."
                 },
                 {
-                    "label": "Monnaie",
+                    "label": "Change",
                     "description": "..."
                 }
             ]
         },
         {
-            "label":"Transport",
+            "label":"Transportation",
             "items": [
                 {
-                    "label": "Billets Avion/Train/Bus",
+                    "label": "Plane/Bus/Train ticket",
                     "description": "..."
                 },
                 {
-                    "label": "Clefs de voiture",
+                    "label": "Car keys",
                     "description": "..."
                 },
                 {
-                    "label": "Cartes de réduction",
+                    "label": "Discount card",
                     "description": "..."
                 }
             ]
         },
         {
-            "label":"Clefs",
+            "label":"Keys",
             "items": [
                 {
-                    "label": "Clefs de chez soi",
+                    "label": "Home keys",
                     "description": "..."
                 },
                 {
-                    "label": "Clefs de la destination",
+                    "label": "Destination keys",
                     "description": "..."
                 }
             ]
         },
         {
-            "label":"Sous vêtements",
+            "label":"Under clothing",
             "items": [
                 {
-                    "label": "Culottes/Caleçons",
+                    "label": "Panties/Underpants",
                     "description": "..."
                 },
                 {
-                    "label": "Chausettes",
+                    "label": "Socks",
                     "description": "..."
                 },
                 {
-                    "label": "Soutien-gorge",
+                    "label": "Bras",
                     "description": "..."
                 },
                 {
-                    "label": "Pyjama",
+                    "label": "Pajamas",
                     "description": "..."
                 },
                 {
-                    "label": "Maillot de bain",
+                    "label": "Swimsuit",
                     "description": "..."
                 },
                 {
-                    "label": "Ceinture",
+                    "label": "Belt",
                     "description": "..."
                 }
             ]
         },
         {
-            "label":"Vêtements haut",
+            "label":"Top clothings",
             "items": [
                 {
-                    "label": "Pulls",
+                    "label": "Sweaters",
                     "description": "..."
                 },
                 {
@@ -121,94 +121,94 @@
                     "description": "..."
                 },
                 {
-                    "label": "Chemise",
+                    "label": "Shirt",
                     "description": "..."
                 },
                 {
-                    "label": "Veste",
+                    "label": "Jacket",
                     "description": "..."
                 },
                 {
-                    "label": "Polaire",
+                    "label": "Fleece ?",
                     "description": "..."
                 },
                 {
-                    "label": "Écharpe",
+                    "label": "Scarf",
                     "description": "..."
                 },
                 {
-                    "label": "Manteau",
+                    "label": "Coat",
                     "description": "..."
                 }
             ]
         },
         {
-            "label":"Vêtements bas",
+            "label":"Bottom clothings",
             "items": [
                 {
-                    "label": "Pantalons",
+                    "label": "Pants / Dress",
                     "description": "..."
                 },
                 {
-                    "label": "Short",
+                    "label": "Shorts / Skirt",
                     "description": "..."
                 },
                 {
-                    "label": "combinaison de ski",
+                    "label": "Evening dress",
+                    "description": "..."
+                },
+                {
+                    "label": "Pareo",
+                    "description": "..."
+                },
+                {
+                    "label": "Ski suit",
                     "description": "..."
                 }
             ]
         },
         {
-            "label":"Pour la tête",
+            "label":"Headgear",
             "items": [
                 {
-                    "label": "Chapeau",
+                    "label": "Hat",
                     "description": "..."
                 },
                 {
-                    "label": "Bonnet",
+                    "label": "Cold Cap",
                     "description": "..."
                 },
                 {
-                    "label": "Élastiques pour cheveux",
+                    "label": "Elastic / Clip",
                     "description": "..."
                 },
                 {
-                    "label": "Barettes",
+                    "label": "Glasses/Lenses",
                     "description": "..."
                 },
                 {
-                    "label": "Lunettes/Lentilles",
-                    "description": "..."
-                },
-                {
-                    "label": "Casquette",
+                    "label": "Cap",
                     "description": "..."
                 }
             ]
         },
         {
-            "label":"Se chausser",
+            "label":"Shoes",
             "items": [
                 {
-                    "label": "Chaussures de ville",
+                    "label": "Street shoes",
                     "description": "..."
                 },
                 {
-                    "label": "Chaussures sports",
+                    "label": "Sports shoes",
                     "description": "..."
                 },
                 {
-                    "label": "Chaussures d'eau",
+                    "label": "Water shoes",
                     "description": "..."
                 },
                 {
-                    "label": "Chaussons/claquettes",
-                    "description": "..."
-                },
-                {
-                    "label": "Bottes",
+                    "label": "Slippers",
                     "description": "..."
                 },
                 {
@@ -218,179 +218,171 @@
             ]
         },
         {
-            "label":"Pour la pluie",
+            "label":"Rain protection",
             "items": [
                 {
-                    "label": "Veste de pluie",
+                    "label": "Rain jacket",
                     "description": "..."
                 },
                 {
-                    "label": "Cape de pluie",
+                    "label": "Raincoat",
                     "description": "..."
                 },
                 {
-                    "label": "Parapluie",
+                    "label": "Umbrella",
                     "description": "..."
                 }
             ]
         },
         {
-            "label":"Se laver",
+            "label":"Hygenie",
             "items": [
                 {
-                    "label": "Savon",
+                    "label": "Soap",
                     "description": "..."
                 },
                 {
-                    "label": "Shampoing/Après",
+                    "label": "Shampoo",
                     "description": "..."
                 },
                 {
-                    "label": "Cotons tiges",
+                    "label": "Cotton swabs",
                     "description": "..."
                 },
                 {
-                    "label": "Brosse à dent",
+                    "label": "Toothbrush",
                     "description": "..."
                 },
                 {
-                    "label": "Dentifrice",
+                    "label": "Toothpaste",
                     "description": "..."
                 },
                 {
-                    "label": "Serviettes",
+                    "label": "Towels",
                     "description": "..."
                 }
             ]
         },
         {
-            "label":"Cosmétiques",
+            "label":"Cosmetics",
             "items":[
                 {
-                    "label": "Déodorant",
+                    "label": "Deodorant",
                     "description": "..."
                 },
                 {
-                    "label": "Parfum",
+                    "label": "Perfume",
                     "description": "..."
                 },
                 {
-                    "label": "Maquillage/Démaquillant",
+                    "label": "Make up",
                     "description": "..."
                 },
                 {
-                    "label": "Baume à lèvres",
+                    "label": "Lip Balm",
                     "description": "..."
                 },
                 {
-                    "label": "Gel/Laque",
+                    "label": "Gel/Laquer",
                     "description": "..."
                 },
                 {
-                    "label": "Gel de rasage",
+                    "label": "Shaving gel",
                     "description": "..."
                 },
                 {
-                    "label": "Savon",
-                    "description": "..."
-                },
-                {
-                    "label": "Sac pour linge sale",
+                    "label": "Laundry bag",
                     "description": "..."
                 }
             ]
         },
         {
-            "label":"Dans la trousse de toillette",
+            "label":"Toilet bag",
             "items":[
                 {
-                    "label": "Coupe ongles",
+                    "label": "Nail clippers",
                     "description": "..."
                 },
                 {
-                    "label": "Pince à épiler",
+                    "label": "Tweezers",
                     "description": "..."
                 },
                 {
-                    "label": "Mouchoirs",
+                    "label": "Tissues",
                     "description": "..."
                 },
                 {
-                    "label": "Papier toilette",
+                    "label": "Toilet paper",
                     "description": "..."
                 },
                 {
-                    "label": "Ciseaux",
+                    "label": "Scissors",
                     "description": "..."
                 },
                 {
-                    "label": "Bouchons d'oreilles",
+                    "label": "Earplugs",
                     "description": "..."
                 },
                 {
-                    "label": "Peigne/Brosse",
+                    "label": "Comb brush",
                     "description": "..."
                 },
                 {
-                    "label": "Serviettes hygièniques/Tampon",
+                    "label": "Hygienic towel",
                     "description": "..."
                 },
                 {
-                    "label": "Rasoirs/Tondeuse",
+                    "label": "Razors",
                     "description": "..."
                 },
                 {
-                    "label": "Épilateur",
+                    "label": "Epilator",
                     "description": "..."
                 }
             ]
         },
         {
-            "label":"Médicaments",
+            "label":"Drugs",
             "items": [
                 {
-                    "label": "Contre le mal de tête",
+                    "label": "Against headache",
                     "description": "..."
                 },
                 {
-                    "label": "Anti-diahréeique",
+                    "label": "Against diarrhea",
                     "description": "..."
                 },
                 {
-                    "label": "Antibiotiques",
+                    "label": "Antibiotics",
                     "description": "..."
                 },
                 {
-                    "label": "Ordonnances en cours",
+                    "label": "Current prescription",
                     "description": "..."
                 },
                 {
-                    "label": "Anti-paludique",
-                    "description": "..."
-                },
-                {
-                    "label": "Pour les brulures",
+                    "label": "Against burns",
                     "description": "..."
                 }
             ]
         },
         {
-            "label":"Santé/Protection",
+            "label":"Healthiness",
             "items":[
                 {
-                    "label": "Désinfectant",
+                    "label": "Disinfectant",
                     "description": "..."
                 },
                 {
-                    "label": "Crème solaire",
+                    "label": "Sunscreen",
                     "description": "..."
                 },
                 {
-                    "label": "Pansements",
+                    "label": "Bandage",
                     "description": "..."
                 },
                 {
-                    "label": "Anti-ampoules",
+                    "label": "For blister",
                     "description": "..."
                 },
                 {
@@ -398,262 +390,270 @@
                     "description": "..."
                 },
                 {
-                    "label": "Sérum physiologique",
+                    "label": "Physioligical saline",
                     "description": "..."
                 },
                 {
-                    "label": "Pastilles purifiantes pour l'eau",
+                    "label": "Cleansing pad for water",
                     "description": "..."
                 },
                 {
-                    "label": "Pillule",
-                    "description": "..."
-                },
-                {
-                    "label": "Préservatifs",
+                    "label": "Contraceptives",
                     "description": "..."
                 }
             ]
         },
         {
-            "label":"Les moustiques et les maladies",
+            "label":"Against mosquitoes",
             "items": [
                 {
-                    "label": "Spray anti-moustiques",
+                    "label": "Mosquito spray",
                     "description": "..."
                 },
                 {
-                    "label": "Traitement des boutons",
+                    "label": "Buttons treatment",
                     "description": "..."
                 },
                 {
-                    "label": "Moustiquaires",
+                    "label": "Mosquito net",
                     "description": "..."
                 },
                 {
-                    "label": "Serpentins",
+                    "label": "Against malarial",
+                    "description": "..."
+                },
+                {
+                    "label": "Smoking coils",
                     "description": "..."
                 }
             ]
         },
         {
-            "label":"Matériel électronique",
+            "label":"Electronical devices",
             "items": [
                 {
-                    "label": "Réveil",
+                    "label": "Alarm clock",
                     "description": "..."
                 },
                 {
-                    "label": "Mobile/Tablette",
+                    "label": "Mobile/Tablet",
                     "description": "..."
                 },
                 {
-                    "label": "Apareil photo/Caméra",
+                    "label": "Camera",
                     "description": "..."
                 },
                 {
-                    "label": "Clefs USB",
+                    "label": "USB keys",
                     "description": "..."
                 },
                 {
-                    "label": "Navigateur GPS",
+                    "label": "GPS navigator",
                     "description": "..."
                 },
                 {
-                    "label": "Ordinateur portable",
+                    "label": "Laptop",
                     "description": "..."
                 },
                 {
-                    "label": "Lampe de poche/Frontale",
+                    "label": "Flashlight",
                     "description": "..."
                 },
                 {
-                    "label": "Console de jeux",
+                    "label": "Game console",
                     "description": "..."
                 },
                 {
-                    "label": "Adaptateur universel",
+                    "label": "Universal adapter",
                     "description": "..."
                 },
                 {
-                    "label": "Chargeurs",
+                    "label": "Chargers",
                     "description": "..."
                 },
                 {
-                    "label": "Piles/Batteries",
+                    "label": "Batteries",
                     "description": "..."
                 }
             ]
         },
         {
-            "label":"Alimentation",
+            "label":"To eat",
             "items": [
                 {
-                    "label": "Couverts/Vaiselle",
+                    "label": "Disches",
                     "description": "..."
                 },
                 {
-                    "label": "Nourriture",
+                    "label": "Food",
                     "description": "..."
                 },
                 {
-                    "label": "Gourde/Bouteille",
+                    "label": "Gourd/Bottle",
                     "description": "..."
                 },
                 {
-                    "label": "Glacière",
+                    "label": "Corkscrew",
+                    "description": "..."
+                },
+                {
+                    "label": "Chees grater",
+                    "description": "..."
+                },
+                {
+                    "label": "Trainer",
+                    "description": "..."
+                },
+                {
+                    "label": "Cooler",
                     "description": "..."
                 }
             ]
         },
         {
-            "label":"Pour dormir",
+            "label":"To sleep",
             "items": [
                 {
-                    "label": "Duvet",
+                    "label": "Sleeping bag",
                     "description": "..."
                 },
                 {
-                    "label": "Oreiller",
-                    "description": "..."
-                },
-                {
-                    "label": "Sac à viande",
+                    "label": "Pillow",
                     "description": "..."
                 }
             ]
         },
         {
-            "label":"Randonnée",
+            "label":"For hiking",
             "items": [
                 {
-                    "label": "Tente",
+                    "label": "Tent",
                     "description": "..."
                 },
                 {
-                    "label": "Bâtons de marche",
+                    "label": "Walking sticks",
                     "description": "..."
                 },
                 {
-                    "label": "Matelas de sol",
+                    "label": "Sleeping pad",
                     "description": "..."
                 },
                 {
-                    "label": "Réchaud",
+                    "label": "Camping stove",
                     "description": "..."
                 }
             ]
         },
         {
-            "label":"Loisirs",
+            "label":"Entertainments",
             "items": [
                 {
-                    "label": "Livres",
+                    "label": "Books",
                     "description": "..."
                 },
                 {
-                    "label": "Jeux de société",
+                    "label": "Board games",
                     "description": "..."
                 },
                 {
-                    "label": "Papier et stylos",
+                    "label": "Paper and pens",
                     "description": "..."
                 },
                 {
-                    "label": "Carnet de voyage",
+                    "label": "Travel notebook",
                     "description": "..."
                 }
             ]
         },
         {
-            "label":"Se repérer",
+            "label":"Maps",
             "items": [
                 {
-                    "label": "Itinéraire",
+                    "label": "Itinerary",
                     "description": "..."
                 },
                 {
-                    "label": "Cartes",
+                    "label": "Maps",
                     "description": "..."
                 },
                 {
-                    "label": "Atlas routier",
+                    "label": "Road atlas",
                     "description": "..."
                 },
                 {
-                    "label": "Guides touristiques",
+                    "label": "Tourist guide",
                     "description": "..."
                 }
             ]
         },
         {
-            "label":"Pour les autres",
+            "label":"For others",
             "items": [
                 {
-                    "label": "Cadeaux",
+                    "label": "Presents",
                     "description": "..."
                 },
                 {
-                    "label": "Carnet d'adresse",
+                    "label": "Adress book",
                     "description": "..."
                 },
                 {
-                    "label": "Cartes postales et timbres",
+                    "label": "Postcards",
                     "description": "..."
                 },
                 {
-                    "label": "Timbres",
+                    "label": "Stamps",
                     "description": "..."
                 }
                 
             ]
         },
         {
-            "label":"Toujours utile",
+            "label":"Always useful",
             "items": [
                 {
-                    "label": "Couteau",
+                    "label": "Knife",
                     "description": "..."
                 },
                 {
-                    "label": "Jumelles",
+                    "label": "Binoculars",
                     "description": "..."
                 },
                 {
-                    "label": "Briquet",
+                    "label": "lighters",
                     "description": "..."
                 },
                 {
-                    "label": "Corde",
+                    "label": "Rope",
                     "description": "..."
                 },
                 {
-                    "label": "Sacs en plastiques",
+                    "label": "Plastic bags",
                     "description": "..."
                 },
                 {
-                    "label": "Sacs poubelle",
+                    "label": "Garbage bag",
                     "description": "..."
                 }
             ]
         },
         {
-            "label": "Avant de partir",
+            "label": "Before leaving",
             "items": [
                 {
-                    "label": "Arroser les plantes",
+                    "label": "Water the plants",
                     "description": "..."
                 },
                 {
-                    "label": "Vider les poubelles",
+                    "label": "Empty trash",
                     "description": "..."
                 },
                 {
-                    "label": "Couper gaz/eau/électricité",
+                    "label": "Turn off electricity/gaz/water",
                     "description": "..."
                 },
                 {
-                    "label": "Révision du véhicule",
+                    "label": "Car check",
                     "description": "..."
                 }
             ]
