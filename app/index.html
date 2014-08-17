@@ -25,9 +25,9 @@
         <script id="template" type="x-tmpl-mustache">
             {{# categories}}
             <div class="category">
-                <h2>{{label}}</h2>
+                <h2 data-toggle="collapse" data-target="#it-{{uid}}" data-parent="#items">{{label}}</h2>
 
-                <ul>
+                <ul id="it-{{uid}}" class="collapse">
                     {{# items }}
                         <li class="item">
                             {{label}}
