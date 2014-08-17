@@ -15,8 +15,6 @@ TODO
 * Data save (localstorage)
 * Filter by category (like "children", "mountains", "more than 4 days", ...)
 * Hide/show checked items
-* i18n and translation
+* More translation
 * Remote/cached data list with cache manifest
 * Add more data
-* Wide screen compatibility
-* Category folding
