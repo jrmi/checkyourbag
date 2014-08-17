@@ -1,10 +1,10 @@
 {
     "categories":[
         {
-            "label": "Documents importants",
+            "label": "Official documents",
             "items": [
                 {
-                    "label": "Carte d'identité",
+                    "label": "Identity card",
                     "description": "..."
                 },
                 {
@@ -146,19 +146,11 @@
             "label":"Vêtements bas",
             "items": [
                 {
-                    "label": "Pantalon / Robe",
+                    "label": "Pantalons",
                     "description": "..."
                 },
                 {
-                    "label": "Short / Jupe",
-                    "description": "..."
-                },
-                {
-                    "label": "Tenue de soirée",
-                    "description": "..."
-                },
-                {
-                    "label": "Pareo",
+                    "label": "Short",
                     "description": "..."
                 },
                 {
@@ -299,6 +291,10 @@
                     "description": "..."
                 },
                 {
+                    "label": "Savon",
+                    "description": "..."
+                },
+                {
                     "label": "Sac pour linge sale",
                     "description": "..."
                 }
@@ -369,6 +365,10 @@
                     "description": "..."
                 },
                 {
+                    "label": "Anti-paludique",
+                    "description": "..."
+                },
+                {
                     "label": "Pour les brulures",
                     "description": "..."
                 }
@@ -406,13 +406,17 @@
                     "description": "..."
                 },
                 {
-                    "label": "Moyens Contraceptifs",
+                    "label": "Pillule",
+                    "description": "..."
+                },
+                {
+                    "label": "Préservatifs",
                     "description": "..."
                 }
             ]
         },
         {
-            "label":"Contre les moustiques",
+            "label":"Les moustiques et les maladies",
             "items": [
                 {
                     "label": "Spray anti-moustiques",
@@ -424,10 +428,6 @@
                 },
                 {
                     "label": "Moustiquaires",
-                    "description": "..."
-                },
-                {
-                    "label": "Anti-paludique",
                     "description": "..."
                 },
                 {
@@ -498,18 +498,6 @@
                 },
                 {
                     "label": "Gourde/Bouteille",
-                    "description": "..."
-                },
-                {
-                    "label": "Tire-bouchon",
-                    "description": "..."
-                },
-                {
-                    "label": "Rape",
-                    "description": "..."
-                },
-                {
-                    "label": "Passoire",
                     "description": "..."
                 },
                 {
@@ -610,7 +598,7 @@
                     "description": "..."
                 },
                 {
-                    "label": "Cartes postales",
+                    "label": "Cartes postales et timbres",
                     "description": "..."
                 },
                 {
