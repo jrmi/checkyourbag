@@ -3,8 +3,8 @@ template = $('#template').html()
 Mustache.parse template
 
 getUniqueId = () ->
-     dateObject = new Date();
-     idp = Math.floor(Math.random() * 1000000000);
+     dateObject = new Date()
+     idp = Math.floor(Math.random() * 1000000000)
      uniqueId =
           dateObject.getFullYear() + '' +
           dateObject.getMonth() + '' +
@@ -18,13 +18,20 @@ loaddata = (data_file) ->
             
             for category in data.categories
                 category.uid = getUniqueId()
-                console.log category.uid
+                category.item_count = category.items.length
 
             rendered = Mustache.render template, data
             $('#items').html(rendered)
             $(".item").click ->
+                $count = $(this).parents('.category').find('.sel-count')
                 $(this).toggleClass('check')
                 $(this).toggleClass('text-success')
+
+                inc = -1
+                if $(this).hasClass('check')
+                    inc = 1
+
+                $count.html(parseInt($count.html()) + inc) 
 
 $ ->
     document.webL10n.ready ->

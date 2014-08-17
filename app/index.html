@@ -25,7 +25,7 @@
         <script id="template" type="x-tmpl-mustache">
             {{# categories}}
             <div class="category">
-                <h2 data-toggle="collapse" data-target="#it-{{uid}}" data-parent="#items">{{label}}</h2>
+                <h2 data-toggle="collapse" data-target="#it-{{uid}}" data-parent="#items">{{label}} (<span class="sel-count">0</span>/{{item_count}})</h2>
 
                 <ul id="it-{{uid}}" class="collapse">
                     {{# items }}
