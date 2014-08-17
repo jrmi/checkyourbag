@@ -15,6 +15,7 @@
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
+        <link rel="prefetch" type="application/l10n" href="/locales/locales.ini" />
     </head>
     <body>
         <!--[if lt IE 10]>
@@ -41,8 +42,8 @@
 
         <div class="container-fluid">
             <div class="header">
-                <h3>Fais ton sac</h3>
-                <p class="text-muted">Vérifiez le contenu de votre sac !</p>
+                <h3 data-l10n-id="title">Check Your Bag</h3>
+                <p class="text-muted" data-l10n-id="greeter">Check you bag before content!</p>
             </div>
 
             <div id="items"></div>
@@ -58,6 +59,7 @@
         <script src="../bower_components/jquery/dist/jquery.js"></script>
         <script src="../bower_components/mustache/mustache.js"></script>
         <!-- endbower -->
+        <script src="./scripts/l10n.js"></script>
         <!-- endbuild -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

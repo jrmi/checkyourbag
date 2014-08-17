@@ -17,3 +17,6 @@ TODO
 * Hide/show checked items
 * i18n and translation
 * Remote/cached data list with cache manifest
+* Add more data
+* Wide screen compatibility
+* Category folding
