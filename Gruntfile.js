@@ -308,7 +308,8 @@ module.exports = function (grunt) {
                         'images/{,*/}*.webp',
                         '{,*/}*.html',
                         'styles/fonts/{,*/}*.*',
-                        'data/{,*/}*.*'
+                        'data/{,*/}*.*',
+                        'locales/{,*/}*.*'
                     ]
                 }, {
                     expand: true,
@@ -356,7 +357,7 @@ module.exports = function (grunt) {
                         expand: true,
                         cwd: '<%= config.dist %>',
                         src: ['**/**'],
-                        dest: '/'
+                        dest: ''
                     }
                 ]
             },
