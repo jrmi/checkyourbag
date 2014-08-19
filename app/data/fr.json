@@ -68,19 +68,6 @@
             ]
         },
         {
-            "label":"Clefs",
-            "items": [
-                {
-                    "label": "Clefs de chez soi",
-                    "description": "..."
-                },
-                {
-                    "label": "Clefs de la destination",
-                    "description": "..."
-                }
-            ]
-        },
-        {
             "label":"Sous vêtements",
             "items": [
                 {
@@ -88,7 +75,7 @@
                     "description": "..."
                 },
                 {
-                    "label": "Chausettes",
+                    "label": "Chaussettes",
                     "description": "..."
                 },
                 {
@@ -337,6 +324,10 @@
                 },
                 {
                     "label": "Rasoirs/Tondeuse",
+                    "description": "..."
+                },
+               
+                    "label": "Bijoux",
                     "description": "..."
                 },
                 {
@@ -641,6 +632,14 @@
                 },
                 {
                     "label": "Sacs poubelle",
+                    "description": "..."
+                },
+                {
+                    "label": "Clefs de chez soi",
+                    "description": "..."
+                },
+                {
+                    "label": "Clefs de la destination",
                     "description": "..."
                 }
             ]

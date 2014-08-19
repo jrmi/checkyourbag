@@ -8,7 +8,7 @@
                     "description": "..."
                 },
                 {
-                    "label": "Passeport",
+                    "label": "Passport",
                     "description": "..."
                 },
                 {
@@ -68,23 +68,10 @@
             ]
         },
         {
-            "label":"Keys",
-            "items": [
-                {
-                    "label": "Home keys",
-                    "description": "..."
-                },
-                {
-                    "label": "Destination keys",
-                    "description": "..."
-                }
-            ]
-        },
-        {
             "label":"Under clothing",
             "items": [
                 {
-                    "label": "Panties/Underpants",
+                    "label": "Panties/Underwears",
                     "description": "..."
                 },
                 {
@@ -96,7 +83,7 @@
                     "description": "..."
                 },
                 {
-                    "label": "Pajamas",
+                    "label": "Pyjamas",
                     "description": "..."
                 },
                 {
@@ -129,7 +116,7 @@
                     "description": "..."
                 },
                 {
-                    "label": "Fleece ?",
+                    "label": "Fleece",
                     "description": "..."
                 },
                 {
@@ -336,6 +323,10 @@
                     "description": "..."
                 },
                 {
+                    "label": "Jewels",
+                    "description": "..."
+                },
+                {
                     "label": "Epilator",
                     "description": "..."
                 }
@@ -367,7 +358,7 @@
             ]
         },
         {
-            "label":"Healthiness",
+            "label":"Health",
             "items":[
                 {
                     "label": "Disinfectant",
@@ -419,11 +410,11 @@
                     "description": "..."
                 },
                 {
-                    "label": "Against malarial",
+                    "label": "Against malaria",
                     "description": "..."
                 },
                 {
-                    "label": "Smoking coils",
+                    "label": "Mosiquito coils",
                     "description": "..."
                 }
             ]
@@ -481,7 +472,7 @@
             "label":"To eat",
             "items": [
                 {
-                    "label": "Disches",
+                    "label": "Dishes",
                     "description": "..."
                 },
                 {
@@ -489,7 +480,7 @@
                     "description": "..."
                 },
                 {
-                    "label": "Gourd/Bottle",
+                    "label": "Flask/Bottle",
                     "description": "..."
                 },
                 {
@@ -497,11 +488,11 @@
                     "description": "..."
                 },
                 {
-                    "label": "Chees grater",
+                    "label": "Cheese grater",
                     "description": "..."
                 },
                 {
-                    "label": "Trainer",
+                    "label": "Sieve",
                     "description": "..."
                 },
                 {
@@ -633,6 +624,14 @@
                 },
                 {
                     "label": "Garbage bag",
+                    "description": "..."
+                },
+                {
+                    "label": "Home keys",
+                    "description": "..."
+                },
+                {
+                    "label": "Destination keys",
                     "description": "..."
                 }
             ]

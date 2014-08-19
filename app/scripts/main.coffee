@@ -2,6 +2,13 @@ template = $('#template').html()
 
 Mustache.parse template
 
+convertToSlug = (text) ->
+        return text
+            .toLowerCase()
+                    .replace(/[^\w ]+/g,'')
+                            .replace(/ +/g,'-')
+                                    
+
 getUniqueId = () ->
      dateObject = new Date()
      idp = Math.floor(Math.random() * 1000000000)
