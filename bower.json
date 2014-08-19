@@ -3,8 +3,8 @@
   "private": true,
   "dependencies": {
     "bootstrap": "~3.0.3",
-    "mustache": "~0.8.0",
-    "jquery": "~1.11.0"
+    "angular": "~1.2.22",
+    "angular-ui": "~0.4.0"
   },
   "devDependencies": {}
 }

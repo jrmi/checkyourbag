@@ -14,7 +14,9 @@ TODO
 =======
 * Data save (localstorage)
 * Filter by category (like "children", "mountains", "more than 4 days", ...)
-* Hide/show checked items
 * More translation
 * Remote/cached data list with cache manifest
 * Add more data
+* Add way to edit base list
+* Add saved bags
+* hierachical menu ?

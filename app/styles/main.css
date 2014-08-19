@@ -117,22 +117,11 @@ body {
     cursor: pointer;
 }
 
-.item.check{
+.item.checked{
     text-decoration: line-through;
     background-color: #DFF0D8;
 }
 
-.item .glyphicon-check{
-    display:none;
-}
-
-.item.check .glyphicon-check{
-    display: inline-block;
-}
-
-.item.check .glyphicon-unchecked{
-    display:none;
-}
 
 body{
     background-color: #EEEEEE;

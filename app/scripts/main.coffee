@@ -1,12 +1,6 @@
 template = $('#template').html()
 
 Mustache.parse template
-
-convertToSlug = (text) ->
-        return text
-            .toLowerCase()
-                    .replace(/[^\w ]+/g,'')
-                            .replace(/ +/g,'-')
                                     
 
 getUniqueId = () ->
