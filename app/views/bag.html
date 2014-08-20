@@ -1,0 +1,25 @@
+
+<div class="container-fluid">
+        <h3 data-l10n-id="title">Check Your Bag</h3>
+        <p class="text-muted" data-l10n-id="greeter">Check you bag content!</p>
+    
+    <div id="items">
+        <div ng-repeat="category in categories" class="category">
+            <h2 data-toggle="collapse" data-target="#it-{{category.uid}}" data-parent="#items" ng-click="isOpen = !isOpen">
+                <span ng-bind="category.label"></span> (<span class="sel-count" ng-bind="category.checked_items"></span>/<span ng-bind="category.items.length"></span>)
+            </h2>
+
+            <ul id="it-{{category.uid}}" class="xcollapse xin"  collapse="!isOpen">
+                <li ng-repeat="item in category.items" class="item ng-class:item.class; " ng-click="toggle(category, item)">
+                    <span ng-bind="item.label"></span>
+                    <span class="glyphicon glyphicon-unchecked pull-right" ng-if="!item.checked"></span>
+                    <span class="glyphicon glyphicon-check pull-right" ng-if="item.checked"></span>
+                </li>  
+            </ul>
+        </div>
+    </div>
+    
+    <div class="footer">
+    </div>
+
+</div>
