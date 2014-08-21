@@ -1,25 +1,30 @@
-
-<div class="container-fluid">
-        <h3 data-l10n-id="title">Check Your Bag</h3>
-        <p class="text-muted" data-l10n-id="greeter">Check you bag content!</p>
     
-    <div id="items">
-        <div ng-repeat="category in categories" class="category">
-            <h2 data-toggle="collapse" data-target="#it-{{category.uid}}" data-parent="#items" ng-click="isOpen = !isOpen">
-                <span ng-bind="category.label"></span> (<span class="sel-count" ng-bind="category.checked_items"></span>/<span ng-bind="category.items.length"></span>)
+<div id="items" class="scrollable">
+    <div class="scrollable-content">
+        <div ng-repeat="category in $storage[bagName]" class="category" ng-if="category.visible_items">
+            <h2 toggle target="it-{{category.uid}}">
+                <span ng-bind="category.label"></span> (<span class="sel-count" ng-bind="category.checked_items"></span>/<span ng-bind="category.visible_items"></span>)
             </h2>
 
-            <ul id="it-{{category.uid}}" class="xcollapse xin"  collapse="!isOpen">
-                <li ng-repeat="item in category.items" class="item ng-class:item.class; " ng-click="toggle(category, item)">
+            <ul toggleable id="it-{{category.uid}}" class="collapse" active-class="in" default="inactive">
+                <li ng-repeat="item in category.items" class="item ng-class:item.class; " ngn-click="toggle(category, item)" ng-if="item.visible">
                     <span ng-bind="item.label"></span>
-                    <span class="glyphicon glyphicon-unchecked pull-right" ng-if="!item.checked"></span>
-                    <span class="glyphicon glyphicon-check pull-right" ng-if="item.checked"></span>
+                    <switch class="pull-right" ng-model="item.checked"  ng-click="updateCounts(category)"></switch>
                 </li>  
             </ul>
         </div>
     </div>
-    
-    <div class="footer">
-    </div>
-
 </div>
+
+<div content-for="btnLeft">
+<div>
+
+<div content-for="menu">
+  <div class="list-group" toggle="off" bubble target="mainSidebar">
+    <a class="list-group-item" href="" ng-click="resetBag()">Restart cheking<i class="fa fa-chevron-left pull-left"></i></a>
+  </div>
+  <div class="list-group" toggle="off" bubble target="mainSidebar">
+    <a class="list-group-item" ng-href="#/bagedit/{{$storage.current_bag}}">Edit visible items<i class="fa fa-chevron-left pull-left"></i></a>
+  </div>
+</div>
+

@@ -10,16 +10,50 @@
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
         <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.css" />
         <!-- endbower -->
+        <link rel="stylesheet" href="../bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-base.css" />
         <!-- endbuild -->
         <!-- build:css(.tmp) styles/main.css -->
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
         <link rel="prefetch" type="application/l10n" href="/locales/locales.ini" />
     </head>
-    <body ng-controller="BagCtrl">
+    <body >
+        <!-- Sidebars -->
 
-        <div ng-view>
+        <div class="sidebar sidebar-right" toggleable parent-active-class="sidebar-right-in" id="mainSidebar">
+          <h1 class="app-name">CheckMyBag</h1>
+
+          <div class="scrollable">
+            <div class="scrollable-content" yield-to="menu">
+
+            </div>
+          </div>
+        </div>
+
+        <div class="app">
+
+          <!-- Navbars -->
+          <div class="navbar navbar-app navbar-absolute-top">
+
+              <div class="navbar-brand navbar-brand-center" yield-to="title">
+                <span>CheckMyBag</span>
+              </div>
+
+              <div class="btn-group pull-right" yield-to="btnRight">
+                <div ng-click="toggle('mainSidebar')" class="btn btn-navbar sidebar-toggle">
+                  <i class="fa fa-bars"></i> Menu
+                </div>
+              </div>
+
+              <div class="btn-group pull-left" yield-to="btnLeft">
+              </div>
+          </div>
+
+          <div class="app-body">
+              <ng-view class="app-content"></ng-view>
+          </div>
         </div>
 
 
@@ -29,8 +63,12 @@
         <script src="../bower_components/jquery/dist/jquery.js"></script>
         <script src="../bower_components/angular/angular.js"></script>
         <script src="../bower_components/angular-route/angular-route.js"></script>
+        <script src="../bower_components/fastclick/lib/fastclick.js"></script>
+        <script src="../bower_components/overthrow/dist/overthrow.js"></script>
+        <script src="../bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.min.js"></script>
+        <script src="../bower_components/ngstorage/ngStorage.js"></script>
+        <script src="../bower_components/angular-touch/angular-touch.js"></script>
         <!-- endbower -->
-        <script src="scripts/vendor/ui-bootstrap-0.11.0.js"></script>
         <!-- endbuild -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->

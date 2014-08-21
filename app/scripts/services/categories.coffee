@@ -15,23 +15,39 @@ loadcat = (data) ->
     for cat in data.categories
         cat.uid = getUniqueId()
         cat.checked_items = 0
+        cat.visible_items = cat.items.length
+        for it in cat.items
+            it.checked = false
+            it.visible = true
     return data.categories
 
-bagModule.factory('CategoryProvider', ['$q', '$http', 
-    ($q, $http) ->
+bagModule.factory('CategoryProvider', ['$q', '$http', '$localStorage',
+    ($q, $http, $localStorage) ->
         # Load categories async
-        delay = $q.defer()
+        $storage = $localStorage
+    
+        defaultbag_delay = $q.defer()
         
         document.webL10n.ready ->
             data_file = 'data/' + document.webL10n.getLanguage() + '.json'
             $http.get(data_file).success (data, status, headers, config) ->
-                delay.resolve(loadcat(data))
+                defaultbag_delay.resolve(loadcat(data))
             .error (data, status, headers, config) ->
                 console.log "Fail to load data '" + data_file + "'. Using default."
                 # Using default file            
                 $http.get('/data/en.json').success (data, status, headers, config) ->
-                    delay.resolve(loadcat(data))
+                    defaultbag_delay.resolve(loadcat(data))
     
-        return delay.promise
+        return updatebag: (bagName) -> 
+                delay = $q.defer()
+        
+                if !(bagName of $storage)
+                    defaultbag_delay.promise.then (cat) ->
+                        $storage[bagName] = cat
+                        delay.resolve()    
+                else
+                    delay.resolve()
+                
+                return delay.promise
     
 ])

@@ -1,0 +1,27 @@
+<div id="items" class="scrollable">
+    <div class="scrollable-content">
+    <div ng-repeat="category in $storage[bagName]" class="category">
+        <h2 toggle target="it-{{category.uid}}">
+            <span ng-bind="category.label"></span> (<span class="sel-count" ng-bind="category.visible_items"></span>/<span ng-bind="category.items.length"></span>)
+        </h2>
+
+        <ul toggleable id="it-{{category.uid}}" class="collapse" active-class="in" default="inactive">
+            <li ng-repeat="item in category.items" class="item ng-class:item.class; ">
+                <span ng-bind="item.label"></span>
+                <switch class="pull-right" ng-model="item.visible" ng-click="updateCounts(category)"></switch>
+            </li>  
+        </ul>
+    </div>
+    </div>
+</div>
+                                                                  
+<div content-for="btnLeft">
+</div>
+<div content-for="title">
+    <span>Select visible items</span>
+</div>
+<div content-for="btnRight">
+    <div class="btn btn-navbar">
+      <a ng-href="#/bag/{{$storage.current_bag}}" ><i class="fa fa-check"></i> Done</a>
+    </div>
+</div>
