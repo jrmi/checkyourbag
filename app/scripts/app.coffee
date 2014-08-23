@@ -1,6 +1,6 @@
 bagModule = angular.module('BagModule', ["mobile-angular-ui", 'BagModule.controllers', 'BagModule.services', 'ngStorage', 'ngRoute'])
 
-bagModule.config ['$routeProvider',
+bagModule.config ['$routeProvider', 
     ($routeProvider) ->
         '''if not 'current_bag' of $localStorage
             $localStorage.current_bag = 'default'
@@ -13,6 +13,9 @@ bagModule.config ['$routeProvider',
         $routeProvider.when '/bagedit/:name',
             controller: 'BagCtrl'
             templateUrl: 'views/bagedit.html'
+        $routeProvider.when '/bagtpl/',
+            controller: 'BagTplCtrl'
+            templateUrl: 'views/bagtpl.html'
         .when '/menu',
             controller: 'MenuCtrl'
             templateUrl: 'views/menu.html'

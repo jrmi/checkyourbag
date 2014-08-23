@@ -38,7 +38,7 @@
           <div class="navbar navbar-app navbar-absolute-top">
 
               <div class="navbar-brand navbar-brand-center" yield-to="title">
-                <span>CheckMyBag</span>
+                <span>Check Your Bag</span>
               </div>
 
               <div class="btn-group pull-right" yield-to="btnRight">
@@ -53,6 +53,9 @@
 
           <div class="app-body">
               <ng-view class="app-content"></ng-view>
+          </div>
+            
+          <div yield-to="bottom">
           </div>
         </div>
 

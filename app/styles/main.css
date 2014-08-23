@@ -135,7 +135,33 @@ body{
     background-color: #222;
     text-align: right;
 }
-/*.container-fluid{
+.switch.active{
+    background-color: #65FF36;
+    border: 1px solid #65FF36;
+}
+.switch.active .switch-handle {
+    border: 1px solid #65FF36;
+}
+
+.fa-chevron-up{
+    display: none;
+    margin-right: 5px;
+}
+
+.fa-chevron-down{
+    display: block;
+    margin-right: 5px;
+}
+
+.open .fa-chevron-up{
+    display: block;
+}
+
+.open .fa-chevron-down{
+    display: none;
+}
+
+/*body{
     max-width: 70rem;
     margin: 0 auto;
 }*/

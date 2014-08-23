@@ -2,8 +2,9 @@
 <div id="items" class="scrollable">
     <div class="scrollable-content">
         <div ng-repeat="category in $storage[bagName]" class="category" ng-if="category.visible_items">
-            <h2 toggle target="it-{{category.uid}}">
+            <h2 toggle target="it-{{category.uid}}"  parent-active-class="open">
                 <span ng-bind="category.label"></span> (<span class="sel-count" ng-bind="category.checked_items"></span>/<span ng-bind="category.visible_items"></span>)
+                <i class="fa fa-chevron-down pull-right"></i><i class="fa fa-chevron-up pull-right"></i>
             </h2>
 
             <ul toggleable id="it-{{category.uid}}" class="collapse" active-class="in" default="inactive">
@@ -25,6 +26,9 @@
   </div>
   <div class="list-group" toggle="off" bubble target="mainSidebar">
     <a class="list-group-item" ng-href="#/bagedit/{{$storage.current_bag}}">Edit visible items<i class="fa fa-chevron-left pull-left"></i></a>
+  </div>
+  <div class="list-group" toggle="off" bubble target="mainSidebar">
+    <a class="list-group-item" ng-href="#/bagtpl/">Choose bag<i class="fa fa-chevron-left pull-left"></i></a>
   </div>
 </div>
 

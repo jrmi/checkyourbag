@@ -1,6 +1,17 @@
 bagModule = angular.module('BagModule.controllers', [])
 
-bagModule.controller('BagCtrl', ['$scope', '$localStorage', '$routeParams', 'CategoryProvider',
+getUniqueId = () ->
+     dateObject = new Date()
+     idp = Math.floor(Math.random() * 1000000000)
+     uniqueId =
+          dateObject.getFullYear() + '' +
+          dateObject.getMonth() + '' +
+          dateObject.getDate() + '' +
+          dateObject.getTime() + '' + idp
+
+     return uniqueId
+
+bagModule.controller 'BagCtrl', ['$scope', '$localStorage', '$routeParams', 'CategoryProvider',
     ($scope, $localStorage, $routeParams, CategoryProvider) ->
         $scope.$storage = $localStorage
         name = $routeParams.name
@@ -33,4 +44,28 @@ bagModule.controller('BagCtrl', ['$scope', '$localStorage', '$routeParams', 'Cat
                 item.class = ""
                 category.checked_items--
         
-]);
+]
+
+bagModule.controller 'BagTplCtrl', ['$scope', '$localStorage', '$routeParams', 'CategoryProvider',
+    ($scope, $localStorage, $routeParams, CategoryProvider) ->
+        $scope.$storage = $localStorage
+        
+        if not('tpl' of $scope.$storage)
+            $scope.$storage.tpl = [
+                id : 'default'
+                name: 'Complet'
+            ]
+        console.log $scope.$storage
+    
+        $scope.newTpl = (tplname) ->
+            if tplname
+                $scope.$storage.tpl.push
+                    id: getUniqueId()
+                    name: tplname
+                    
+        $scope.deleteTpl = (idToRemove) ->
+            $scope.$storage.tpl = (tpl for tpl in $scope.$storage.tpl when tpl.id isnt idToRemove)
+                
+            delete $scope.$storage["bag__#{idToRemove}"]
+
+]

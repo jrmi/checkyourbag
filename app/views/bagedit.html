@@ -1,8 +1,9 @@
 <div id="items" class="scrollable">
     <div class="scrollable-content">
     <div ng-repeat="category in $storage[bagName]" class="category">
-        <h2 toggle target="it-{{category.uid}}">
+        <h2 toggle target="it-{{category.uid}}" parent-active-class="open">
             <span ng-bind="category.label"></span> (<span class="sel-count" ng-bind="category.visible_items"></span>/<span ng-bind="category.items.length"></span>)
+            <i class="fa fa-chevron-down pull-right"></i><i class="fa fa-chevron-up pull-right"></i>
         </h2>
 
         <ul toggleable id="it-{{category.uid}}" class="collapse" active-class="in" default="inactive">
