@@ -1,96 +1,64 @@
-<!doctype html>
-<html class="no-js" ng-app="BagModule">
-    <head>
-        <meta charset="utf-8">
-        <title>CheckYourBag</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, user-scalable=no">
-        <link rel="shortcut icon" href="/favicon.ico">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <!-- build:css styles/vendor.css -->
-        <!-- bower:css -->
-        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
-        <link rel="stylesheet" href="../bower_components/font-awesome/css/font-awesome.css" />
-        <!-- endbower -->
-        <link rel="stylesheet" href="../bower_components/mobile-angular-ui/dist/css/mobile-angular-ui-base.css" />
-        <!-- endbuild -->
-        <!-- build:css(.tmp) styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
-        <!-- endbuild -->
-        <link rel="prefetch" type="application/l10n" href="/locales/locales.ini" />
-    </head>
-    <body >
-        <!-- Sidebars -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>"Ionicyo"</title>
 
-        <div class="sidebar sidebar-right" toggleable parent-active-class="sidebar-right-in" id="mainSidebar">
-          <h1 class="app-name">CheckMyBag</h1>
+    <!-- build:css styles/vendor.css -->
+    <!-- <link rel="stylesheet" href="vendor/some.contrib.css"> -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/ionic/release/css/ionic.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
 
-          <div class="scrollable">
-            <div class="scrollable-content" yield-to="menu">
+    <!-- build:css({.tmp,app}) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
 
-            </div>
-          </div>
-        </div>
+  <body ng-app="Ionicyo" animation="slide-left-right-ios7">
 
-        <div class="app">
+    <!--
+      The nav bar that will be updated as we navigate between views
+      Additional attributes set its look, ion-nav-bar animation and icons
+      Icons provided by Ionicons: http://ionicons.com/
+    -->
+    <ion-nav-bar class="bar-positive">
+    </ion-nav-bar>
 
-          <!-- Navbars -->
-          <div class="navbar navbar-app navbar-absolute-top">
+    <!--
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    -->
+    <ion-nav-view></ion-nav-view>
 
-              <div class="navbar-brand navbar-brand-center" yield-to="title">
-                <span>Check Your Bag</span>
-              </div>
+    <!-- build:js scripts/vendor.js -->
+    <!-- <script src="vendor/someContribJs.js"></script> -->
+    <script src="scripts/vendor/l10n.js"></script>
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/collide/collide.js"></script>
+    <script src="bower_components/ionic/release/js/ionic.js"></script>
+    <script src="bower_components/ionic/release/js/ionic-angular.js"></script>
+    <script src="bower_components/ngstorage/ngStorage.js"></script>
+    <script src="bower_components/hammerjs/hammer.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
 
-              <div class="btn-group pull-right" yield-to="btnRight">
-                <div ng-click="toggle('mainSidebar')" class="btn btn-navbar sidebar-toggle">
-                  <i class="fa fa-bars"></i> Menu
-                </div>
-              </div>
-
-              <div class="btn-group pull-left" yield-to="btnLeft">
-              </div>
-          </div>
-
-          <div class="app-body">
-              <ng-view class="app-content"></ng-view>
-          </div>
-            
-          <div yield-to="bottom">
-          </div>
-        </div>
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
 
 
-        <!-- build:js scripts/vendor.js -->
-        <script src="./scripts/vendor/l10n.js"></script>
-        <!-- bower:js -->
-        <script src="../bower_components/jquery/dist/jquery.js"></script>
-        <script src="../bower_components/angular/angular.js"></script>
-        <script src="../bower_components/angular-route/angular-route.js"></script>
-        <script src="../bower_components/fastclick/lib/fastclick.js"></script>
-        <script src="../bower_components/overthrow/dist/overthrow.js"></script>
-        <script src="../bower_components/mobile-angular-ui/dist/js/mobile-angular-ui.min.js"></script>
-        <script src="../bower_components/ngstorage/ngStorage.js"></script>
-        <script src="../bower_components/angular-touch/angular-touch.js"></script>
-        <!-- endbower -->
-        <!-- endbuild -->
-
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
-
-        <!-- build:js scripts/plugins.js -->
-        <!-- endbuild -->
-
-        <!-- build:js({app,.tmp}) scripts/main.js -->
+        <!-- build:js scripts/scripts.js -->
+        <script src="scripts/config.js"></script>
         <script src="scripts/app.js"></script>
-        <script src="scripts/services/categories.js"></script>
-        <script src="scripts/controllers/bagctrl.js"></script>
+        <script src="scripts/controllers.js"></script>
+        <script src="scripts/services.js"></script>
         <!-- endbuild -->
 </body>
 </html>

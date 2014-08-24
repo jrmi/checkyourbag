@@ -1,0 +1,18 @@
+<ion-view title="Choose Your Bag">
+  <ion-content>
+      
+    <ion-nav-buttons side="right">
+      <a class="button" href="#/bag/list_edit">Edit</a>
+    </ion-nav-buttons>
+      
+    <ion-list>
+
+      <ion-item class="item-icon-right" ng-repeat="bag in $storage.tpl" type="item-text-wrap" href="#/bag/{{bag.id}}">
+        <h3>{{bag.name}}</h3>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+      
+    </ion-list>
+      
+  </ion-content>
+</ion-view>

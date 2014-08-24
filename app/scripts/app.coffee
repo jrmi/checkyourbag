@@ -1,23 +1,58 @@
-bagModule = angular.module('BagModule', ["mobile-angular-ui", 'BagModule.controllers', 'BagModule.services', 'ngStorage', 'ngRoute'])
+angular.module('Ionicyo', ['ionic', 'Ionicyo.services', 'Ionicyo.controllers', 'ngStorage'])
 
-bagModule.config ['$routeProvider', 
-    ($routeProvider) ->
-        '''if not 'current_bag' of $localStorage
-            $localStorage.current_bag = 'default'
+.config ($stateProvider, $urlRouterProvider) ->
+
+  $stateProvider
+
+    .state 'bag', 
+      url: '/bag',
+      abstract: true,
+      templateUrl: 'templates/main.html'
             
-        console.log $localStorage'''
+    .state 'bag.list', 
+      url: '/all',
+      views:
+        'bag': 
+          templateUrl: 'templates/bagtpl.html',
+          controller: 'BagTplCtrl'
             
-        $routeProvider.when '/bag/:name',
-            controller: 'BagCtrl'
-            templateUrl: 'views/bag.html'
-        $routeProvider.when '/bagedit/:name',
-            controller: 'BagCtrl'
-            templateUrl: 'views/bagedit.html'
-        $routeProvider.when '/bagtpl/',
-            controller: 'BagTplCtrl'
-            templateUrl: 'views/bagtpl.html'
-        .when '/menu',
-            controller: 'MenuCtrl'
-            templateUrl: 'views/menu.html'
-        .otherwise redirectTo: '/bag/default'
-]
+    .state 'bag.listedit', 
+      url: '/list_edit',
+      views:
+        'bag': 
+          templateUrl: 'templates/bagtpl_edit.html',
+          controller: 'BagTplCtrl'
+            
+    .state 'bag.content', 
+      url: '/:name',
+      views:
+        'bag': 
+          templateUrl: 'templates/bag.html',
+          controller: 'BagCtrl'  
+            
+    .state 'bag.edit', 
+      url: '/edit/:name',
+      views:
+        'bag': 
+          templateUrl: 'templates/bagedit.html',
+          controller: 'BagCtrl' 
+              
+    .state 'bag.category', 
+      url: '/details/:name/cat/:id',
+      views:
+        'bag': 
+          templateUrl: 'templates/category.html',
+          controller: 'CatCtrl'
+            
+    .state 'bag.category_edit', 
+      url: '/details_edit/:name/cat/:id',
+      views:
+        'bag': 
+          templateUrl: 'templates/categoryedit.html',
+          controller: 'CatCtrl'
+            
+    
+
+  $urlRouterProvider.otherwise '/bag/all'
+
+

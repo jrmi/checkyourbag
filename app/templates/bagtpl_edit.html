@@ -1,0 +1,35 @@
+<ion-view title="Choose Your Bag">
+  <ion-content>
+    <ion-nav-buttons side="left" >
+        <a class="button" ng-click="$storage.$reset()">Reset All</a>
+    </ion-nav-buttons>
+      
+    <ion-nav-buttons side="right">
+      <a class="button" href="#/bag/all">Done</a>
+    </ion-nav-buttons>
+      
+    <ion-list show-delete="shouldShowDelete" show-reorder="shouldShowReorder">
+
+      <ion-item class="item-icon-right" ng-repeat="bag in $storage.tpl" type="item-text-wrap" >
+        <ion-delete-button class="ion-minus-circled" ng-click="$storage.tpl.splice($index, 1)"></ion-delete-button>
+        <h3>{{bag.name}}</h3>
+        <ion-reorder-button class="ion-navicon" on-reorder="moveBag(bag, $fromIndex, $toIndex)"></ion-reorder>
+      </ion-item>
+      <div class="item item-input-inset" ng-if="!shouldShowDelete && !shouldShowReorder">
+        <label class="item-input-wrapper">
+          <input type="text" placeholder="Bag name" ng-model="name">
+        </label>
+        <button class="button button-small" ng-click="newTpl(name)">
+          Add
+        </button>
+      </div>
+      
+    </ion-list>
+      
+    <div class="button-bar">
+      <a class="button" ng-click="shouldShowDelete = !shouldShowDelete">Delete</a>
+      <a class="button" ng-click="shouldShowReorder = !shouldShowReorder">Reorder</a>
+    </div>
+      
+  </ion-content>
+</ion-view>

@@ -1,0 +1,39 @@
+<ion-view title="Choose visible items">
+  <ion-content>
+      
+    <ion-nav-buttons side="right">
+      <a class="button" href="#/bag/details/{{current_bag}}/cat/{{catid}}">Done</a>
+    </ion-nav-buttons>
+
+      
+    <ion-list show-delete="shouldShowDelete" show-reorder="shouldShowReorder">
+        
+      <ion-item class="item-icon-right item-toggle" ng-repeat="item in $storage[bagName][catid].items" type="item-text-wrap">
+        <ion-delete-button class="ion-minus-circled" ng-click="$storage[bagName][catid].items.splice($index, 1)"></ion-delete-button>
+        <h3>{{item.label}}</h3>
+        <label class="toggle" ng-hide="shouldShowReorder">
+           <input type="checkbox" ng-model="item.visible" ng-change="updateCounts(bagName, catid)">
+           <div class="track">
+             <div class="handle"></div>
+           </div>
+        </label>
+        <ion-reorder-button class="ion-arrow-move" on-reorder="moveItem(bagName, catid, item, $fromIndex, $toIndex)"></ion-reorder>
+      </ion-item>
+      <div class="item item-input-inset" ng-if="!shouldShowDelete && !shouldShowReorder">
+        <label class="item-input-wrapper">
+          <input type="text" placeholder="Item name" ng-model="name">
+        </label>
+        <button class="button button-small" ng-click="newItem(bagName, catid, name)">
+          Add
+        </button>
+      </div>
+      
+    </ion-list>
+      
+    <div class="button-bar">
+      <a class="button" ng-click="shouldShowDelete = !shouldShowDelete">Delete</a>
+      <a class="button" ng-click="shouldShowReorder = !shouldShowReorder">Reorder</a>
+    </div>
+      
+  </ion-content>
+</ion-view>

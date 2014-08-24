@@ -1,5 +1,3 @@
-bagModule = angular.module('BagModule.services', [])
-
 getUniqueId = () ->
      dateObject = new Date()
      idp = Math.floor(Math.random() * 1000000000)
@@ -21,7 +19,9 @@ loadcat = (data) ->
             it.visible = true
     return data.categories
 
-bagModule.factory('CategoryProvider', ['$q', '$http', '$localStorage',
+angular.module 'Ionicyo.services', []
+
+.factory('CategoryProvider', ['$q', '$http', '$localStorage',
     ($q, $http, $localStorage) ->
         # Load categories async
         $storage = $localStorage
