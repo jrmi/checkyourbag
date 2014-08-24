@@ -414,8 +414,25 @@ module.exports = function (grunt) {
           dest: '.tmp/concat/<%= yeoman.scripts %>'
         }]
       }
+    },
+      
+    compress: {
+        main: {
+            options: {
+                mode: 'zip',
+                archive: 'release/checkyourbag.zip'
+            },
+            files: [
+                {
+                    expand: true,
+                    cwd: 'www/',
+                    src: ['**/**'],
+                    dest: ''
+                }
+            ]
+        },
     }
-
+                   
   });
 
   // Register tasks for all Cordova commands, but namespace
@@ -536,4 +553,12 @@ module.exports = function (grunt) {
     'karma:continuous',
     'build'
   ]);
+    
+  grunt.registerTask('release', function () {
+    grunt.task.run([
+        'build',
+        'compress'
+    ]);
+  });
+    
 };

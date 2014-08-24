@@ -8,15 +8,11 @@ This application should remains simple over the time.
 This is a [Firefox OS](https://www.mozilla.org/en-US/firefox/os/) 
 application published on the [marketplace](https://marketplace.firefox.com/app/checkyourbag/).
 
-For now, data are only in french, but you can help me to translate.
+Checked items are now saved and you can create mutiple bag template and edit bag content.
 
 TODO
 =======
-* Data save (localstorage)
 * Filter by category (like "children", "mountains", "more than 4 days", ...)
 * More translation
 * Remote/cached data list with cache manifest
 * Add more data
-* Add way to edit base list
-* Add saved bags
-* hierachical menu ?
