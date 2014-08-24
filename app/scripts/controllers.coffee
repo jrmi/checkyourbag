@@ -1,3 +1,5 @@
+console.log 'coucouctr'
+
 getUniqueId = () ->
      dateObject = new Date()
      idp = Math.floor(Math.random() * 1000000000)
@@ -9,7 +11,7 @@ getUniqueId = () ->
 
      return uniqueId
 
-angular.module 'Ionicyo.controllers', []
+angular.module 'bagModule.controllers', []
 
 .controller 'BagTplCtrl', ['$scope', '$localStorage', 'CategoryProvider', '$state'
     ($scope, $localStorage, CategoryProvider, $state) ->
@@ -20,7 +22,6 @@ angular.module 'Ionicyo.controllers', []
                 id : 'default'
                 name: 'Complet'
             ]
-        console.log $scope.$storage
     
         $scope.newTpl = (name) ->
             if name

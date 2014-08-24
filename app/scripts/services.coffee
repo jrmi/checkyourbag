@@ -1,3 +1,5 @@
+console.log 'coucousrv'
+
 getUniqueId = () ->
      dateObject = new Date()
      idp = Math.floor(Math.random() * 1000000000)
@@ -19,7 +21,7 @@ loadcat = (data) ->
             it.visible = true
     return data.categories
 
-angular.module 'Ionicyo.services', []
+angular.module 'bagModule.services', []
 
 .factory('CategoryProvider', ['$q', '$http', '$localStorage',
     ($q, $http, $localStorage) ->

@@ -1,11 +1,11 @@
 <ion-view title="Choose Your Bag">
   <ion-content>
     <ion-nav-buttons side="left" >
-        <a class="button" ng-click="$storage.$reset()">Reset All</a>
+        <a class="button" ng-click="$storage.$reset()" data-l10n-id="btn_reset_all">Reset All</a>
     </ion-nav-buttons>
       
     <ion-nav-buttons side="right">
-      <a class="button" href="#/bag/all">Done</a>
+      <a class="button" href="#/bag/all" data-l10n-id="btn_done">Done</a>
     </ion-nav-buttons>
       
     <ion-list show-delete="shouldShowDelete" show-reorder="shouldShowReorder">
@@ -19,7 +19,7 @@
         <label class="item-input-wrapper">
           <input type="text" placeholder="Bag name" ng-model="name">
         </label>
-        <button class="button button-small" ng-click="newTpl(name)">
+        <button class="button button-small" ng-click="newTpl(name)" data-l10n-id="btn_add">
           Add
         </button>
       </div>
@@ -27,8 +27,8 @@
     </ion-list>
       
     <div class="button-bar">
-      <a class="button" ng-click="shouldShowDelete = !shouldShowDelete">Delete</a>
-      <a class="button" ng-click="shouldShowReorder = !shouldShowReorder">Reorder</a>
+      <a class="button" ng-click="shouldShowDelete = !shouldShowDelete" data-l10n-id="btn_delete">Delete</a>
+      <a class="button" ng-click="shouldShowReorder = !shouldShowReorder" data-l10n-id="btn_reorder">Reorder</a>
     </div>
       
   </ion-content>

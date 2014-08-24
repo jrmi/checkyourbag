@@ -1,7 +1,11 @@
-angular.module('Ionicyo', ['ionic', 'Ionicyo.services', 'Ionicyo.controllers', 'ngStorage'])
+console.log 'coucou'
 
-.config ($stateProvider, $urlRouterProvider) ->
+angular.module('bagModule', ['ionic', 'bagModule.services', 'bagModule.controllers', 'ngStorage'])
 
+.config ['$stateProvider', '$urlRouterProvider', '$compileProvider', ($stateProvider, $urlRouterProvider, $compileProvider) ->
+    
+  $compileProvider.aHrefSanitizationWhitelist /^\s*(app|https?|ftp|mailto|chrome-extension):/
+    
   $stateProvider
 
     .state 'bag', 
@@ -54,5 +58,5 @@ angular.module('Ionicyo', ['ionic', 'Ionicyo.services', 'Ionicyo.controllers', '
     
 
   $urlRouterProvider.otherwise '/bag/all'
-
+]
 

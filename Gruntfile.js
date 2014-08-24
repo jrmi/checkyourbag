@@ -90,6 +90,7 @@ module.exports = function (grunt) {
           '<%= yeoman.app %>/*.html',
           '<%= yeoman.app %>/templates/**/*.html',
           '.tmp/<%= yeoman.styles %>/**/*.css',
+          '.tmp/scripts/{,*/}*.js',
           '<%= yeoman.app %>/<%= yeoman.images %>/**/*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       }
@@ -272,6 +273,9 @@ module.exports = function (grunt) {
             'images/**/*.{png,jpg,jpeg,gif,webp,svg}',
             '*.html',
             'templates/**/*.html',
+            'manifest.webapp',
+            'data/{,*/}*.*',
+            'locales/{,*/}*.*',
             'fonts/*'
           ]
         }, {
@@ -321,7 +325,7 @@ module.exports = function (grunt) {
         'copy:fonts'
       ],
       dist: [
-        'coffee',
+        'coffee:dist',
         'copy:styles',
         'copy:vendor',
         'copy:fonts'

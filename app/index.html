@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-    <title>"Ionicyo"</title>
+    <title>Check Your Bag</title>
 
     <!-- build:css styles/vendor.css -->
     <!-- <link rel="stylesheet" href="vendor/some.contrib.css"> -->
@@ -11,14 +11,12 @@
     <link rel="stylesheet" href="bower_components/ionic/release/css/ionic.css" />
     <!-- endbower -->
     <!-- endbuild -->
-
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
 
-  <body ng-app="Ionicyo" animation="slide-left-right-ios7">
-
+  <body ng-app="bagModule" animation="slide-left-right-ios7">
     <!--
       The nav bar that will be updated as we navigate between views
       Additional attributes set its look, ion-nav-bar animation and icons
@@ -36,7 +34,6 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- <script src="vendor/someContribJs.js"></script> -->
-    <script src="scripts/vendor/l10n.js"></script>
     <!-- bower:js -->
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
@@ -54,11 +51,12 @@
     <script src="cordova.js"></script>
 
 
-        <!-- build:js scripts/scripts.js -->
-        <script src="scripts/config.js"></script>
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers.js"></script>
-        <script src="scripts/services.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({app,.tmp}) scripts/scripts.js -->
+    <script src="scripts/config.js"></script>
+    <script src="scripts/vendor/l10n.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers.js"></script>
+    <script src="scripts/services.js"></script>
+    <!-- endbuild -->
 </body>
 </html>
