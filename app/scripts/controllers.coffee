@@ -1,5 +1,3 @@
-console.log 'coucouctr'
-
 getUniqueId = () ->
      dateObject = new Date()
      idp = Math.floor(Math.random() * 1000000000)
@@ -13,15 +11,16 @@ getUniqueId = () ->
 
 angular.module 'bagModule.controllers', []
 
-.controller 'BagTplCtrl', ['$scope', '$localStorage', 'CategoryProvider', '$state'
-    ($scope, $localStorage, CategoryProvider, $state) ->
+.controller 'BagTplCtrl', ['$scope', '$localStorage', 'CategoryProvider', '$state', '$translate',
+    ($scope, $localStorage, CategoryProvider, $state, $translate) ->
         $scope.$storage = $localStorage
         
         if not('tpl' of $scope.$storage)
-            $scope.$storage.tpl = [
-                id : 'default'
-                name: 'Complet'
-            ]
+            $translate('full-bag').then (fullBagName) ->
+                $scope.$storage.tpl = [
+                    id : 'default'
+                    name: fullBagName
+                ]
     
         $scope.newTpl = (name) ->
             if name

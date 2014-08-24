@@ -1,8 +1,8 @@
-<ion-view title="Choose visible items">
+<ion-view ng-attr-title="{{ 'choose-visible' | translate }}">
   <ion-content>
       
     <ion-nav-buttons side="right">
-      <a class="button" href="#/bag/details/{{current_bag}}/cat/{{catid}}"  data-l10n-id="btn_done">Done</a>
+      <a class="button" href="#/bag/details/{{current_bag}}/cat/{{catid}}"  translate>btn-done</a>
     </ion-nav-buttons>
 
       
@@ -21,18 +21,18 @@
       </ion-item>
       <div class="item item-input-inset" ng-if="!shouldShowDelete && !shouldShowReorder">
         <label class="item-input-wrapper">
-          <input type="text" placeholder="Item name" ng-model="name">
+          <input type="text" ng-attr-placeholder="{{ 'item-name' | translate }}" ng-model="name">
         </label>
-        <button class="button button-small" ng-click="newItem(bagName, catid, name)"  data-l10n-id="btn_add">
-          Add
+        <button class="button button-small" ng-click="newItem(bagName, catid, name)"  translate>
+          btn-add
         </button>
       </div>
       
     </ion-list>
       
     <div class="button-bar">
-      <a class="button" ng-click="shouldShowDelete = !shouldShowDelete" data-l10n-id="btn_delete">Delete</a>
-      <a class="button" ng-click="shouldShowReorder = !shouldShowReorder" data-l10n-id="btn_reorder">Reorder</a>
+      <a class="button" ng-click="shouldShowDelete = !shouldShowDelete">{{'btn-remove'|translate}}</a>
+      <a class="button" ng-click="shouldShowReorder = !shouldShowReorder">{{'btn-reorder'|translate}}</a>
     </div>
       
   </ion-content>

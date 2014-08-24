@@ -1,12 +1,12 @@
-<ion-view title="Choose Your Bag">
+<ion-view ng-attr-title="{{'choose-your-bag' | translate}}">
   <ion-content>
       
     <ion-nav-buttons side="right">
-      <a class="button" href="/index.html#/bag/list_edit"  data-l10n-id="btn_edit">Edit</a>
+      <a class="button" href="/index.html#/bag/list_edit" translate>btn-edit</a>
     </ion-nav-buttons>
       
     <ion-list>
-
+    
       <ion-item class="item-icon-right" ng-repeat="bag in $storage.tpl" type="item-text-wrap" href="#/bag/{{bag.id}}">
         <h3>{{bag.name}}</h3>
         <i class="icon ion-chevron-right icon-accessory"></i>

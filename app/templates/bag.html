@@ -1,4 +1,4 @@
-<ion-view title="Choose Your Category">
+<ion-view ng-attr-title="{{ 'choose-your-category' | translate }}">
   <ion-content>
       
     <ion-nav-buttons side="left" >
@@ -6,7 +6,7 @@
     </ion-nav-buttons>
       
     <ion-nav-buttons side="right">
-        <button class="button" ng-click="resetBag()" data-l10n-id="btn_reset">Reset</button>
+        <button class="button" ng-click="resetBag()" translate>btn-reset</button>
     </ion-nav-buttons>
 
     <ion-list>

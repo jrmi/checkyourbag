@@ -1,4 +1,4 @@
-<ion-view title="Check Your Bag">
+<ion-view ng-attr-title="{{ $storage[bagName][catid].label }}">
   <ion-content>
       
     <ion-nav-buttons side="left" >
@@ -6,7 +6,7 @@
     </ion-nav-buttons>
       
     <ion-nav-buttons side="right">
-      <a class="button" href="#/bag/details_edit/{{current_bag}}/cat/{{catid}}">Edit</a>
+      <a class="button" href="#/bag/details_edit/{{current_bag}}/cat/{{catid}}" translate>btn-edit</a>
     </ion-nav-buttons>
 
     <div class="list">

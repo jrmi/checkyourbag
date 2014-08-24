@@ -1,5 +1,3 @@
-console.log 'coucousrv'
-
 getUniqueId = () ->
      dateObject = new Date()
      idp = Math.floor(Math.random() * 1000000000)
@@ -23,22 +21,21 @@ loadcat = (data) ->
 
 angular.module 'bagModule.services', []
 
-.factory('CategoryProvider', ['$q', '$http', '$localStorage',
-    ($q, $http, $localStorage) ->
+.factory('CategoryProvider', ['$q', '$http', '$localStorage', '$translate',
+    ($q, $http, $localStorage, $translate) ->
         # Load categories async
         $storage = $localStorage
     
         defaultbag_delay = $q.defer()
         
-        document.webL10n.ready ->
-            data_file = 'data/' + document.webL10n.getLanguage() + '.json'
-            $http.get(data_file).success (data, status, headers, config) ->
+        data_file = 'data/' + $translate.use() + '.json'
+        $http.get(data_file).success (data, status, headers, config) ->
+            defaultbag_delay.resolve(loadcat(data))
+        .error (data, status, headers, config) ->
+            console.log "Fail to load data '" + data_file + "'. Using default."
+            # Using default file            
+            $http.get('/data/en.json').success (data, status, headers, config) ->
                 defaultbag_delay.resolve(loadcat(data))
-            .error (data, status, headers, config) ->
-                console.log "Fail to load data '" + data_file + "'. Using default."
-                # Using default file            
-                $http.get('/data/en.json').success (data, status, headers, config) ->
-                    defaultbag_delay.resolve(loadcat(data))
     
         return updatebag: (bagName) -> 
                 delay = $q.defer()

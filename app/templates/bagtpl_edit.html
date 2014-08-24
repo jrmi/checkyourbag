@@ -1,11 +1,11 @@
-<ion-view title="Choose Your Bag">
+<ion-view ng-attr-title="{{'edit-your-bags' | translate}}">
   <ion-content>
     <ion-nav-buttons side="left" >
-        <a class="button" ng-click="$storage.$reset()" data-l10n-id="btn_reset_all">Reset All</a>
+        <a class="button" ng-click="$storage.$reset()" translate>btn-reset-all</a>
     </ion-nav-buttons>
       
     <ion-nav-buttons side="right">
-      <a class="button" href="#/bag/all" data-l10n-id="btn_done">Done</a>
+      <a class="button" href="#/bag/all" translate>btn-done</a>
     </ion-nav-buttons>
       
     <ion-list show-delete="shouldShowDelete" show-reorder="shouldShowReorder">
@@ -17,18 +17,18 @@
       </ion-item>
       <div class="item item-input-inset" ng-if="!shouldShowDelete && !shouldShowReorder">
         <label class="item-input-wrapper">
-          <input type="text" placeholder="Bag name" ng-model="name">
+          <input type="text" ng-attr-placeholder="{{ 'bag-name' | translate }}" ng-model="name">
         </label>
-        <button class="button button-small" ng-click="newTpl(name)" data-l10n-id="btn_add">
-          Add
+        <button class="button button-small" ng-click="newTpl(name)" translate>
+          btn-add
         </button>
       </div>
       
     </ion-list>
       
     <div class="button-bar">
-      <a class="button" ng-click="shouldShowDelete = !shouldShowDelete" data-l10n-id="btn_delete">Delete</a>
-      <a class="button" ng-click="shouldShowReorder = !shouldShowReorder" data-l10n-id="btn_reorder">Reorder</a>
+      <a class="button" ng-click="shouldShowDelete = !shouldShowDelete">{{ 'btn-remove' | translate }}</a>
+      <a class="button" ng-click="shouldShowReorder = !shouldShowReorder">{{ 'btn-reorder' | translate }}</a>
     </div>
       
   </ion-content>
