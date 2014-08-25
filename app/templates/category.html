@@ -8,7 +8,7 @@
     <ion-nav-buttons side="right">
       <a class="button button-outline button-light" href="#/bag/details_edit/{{current_bag}}/cat/{{catid}}" translate>btn-edit</a>
     </ion-nav-buttons>
-
+      <h3>{{bagName}}</h3>
     <div class="list">
         <ion-checkbox ng-repeat="item in $storage[bagName][catid].items" ng-model="item.checked" ng-if="item.visible" ng-change="updateCounts(bagName, catid)">{{item.label}}</ion-checkbox>
     </div>
