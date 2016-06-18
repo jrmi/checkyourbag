@@ -29,8 +29,11 @@ angular.module 'bagModule.services', []
         defaultbag_delay = $q.defer()
         
         data_file = 'data/' + $translate.use() + '.json'
-        $http.get(data_file).success (data, status, headers, config) ->
+
+        $http.get(data_file)
+        .success (data, status, headers, config) ->
             defaultbag_delay.resolve(loadcat(data))
+
         .error (data, status, headers, config) ->
             console.log "Fail to load data '" + data_file + "'. Using default."
             # Using default file            

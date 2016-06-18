@@ -103,4 +103,54 @@ angular.module 'bagModule.controllers', []
         
 ]
 
-  
+.controller 'CatSlideCtrl', ['$scope', '$localStorage', '$stateParams', 'CategoryProvider', '$state', '$ionicViewSwitcher',
+    ($scope, $localStorage, $stateParams, CategoryProvider, $state, $ionicViewSwitcher) ->
+
+        $scope.$storage = $localStorage
+        $scope.currentBag = $stateParams.name
+        $scope.catid = parseInt($stateParams.id, 10)
+        $scope.bagName = "bag__" + $scope.currentBag
+
+        CategoryProvider.updatebag($scope.bagName)
+
+        $scope.updateCounts = (bagName, catid) ->
+            cat = $scope.$storage[bagName][catid]
+            cat.checked_items = 0
+            cat.visible_items = 0
+            for item in cat.items
+                if item.visible
+                    cat.visible_items++
+                    if item.checked
+                        cat.checked_items++
+
+        $scope.newItem = (bagName, catid, name) ->
+            if name
+                found = false
+                for item in $scope.$storage[bagName][catid].items
+                    if name == item.label
+                        found = true
+                if !found
+                   $scope.$storage[bagName][catid].items.push
+                        label: name
+                        checked: false
+                        visible: true
+
+        $scope.moveItem = (bagName, catid, item, fromIndex, toIndex) ->
+            $scope.$storage[bagName][catid].items.splice(fromIndex, 1)
+            $scope.$storage[bagName][catid].items.splice(toIndex, 0, item)
+
+        $scope.nextCategory = () ->
+            if $scope.catid >= $scope.$storage[$scope.bagName].length - 1
+               $scope.catid = $scope.$storage[$scope.bagName].length - 1
+            else
+                $ionicViewSwitcher.nextDirection('forward')
+                $state.go('bag.category_slide', {'name': $scope.currentBag, id: $scope.catid + 1})
+
+        $scope.previousCategory = () ->
+            if $scope.catid <= 0
+               $scope.catid = 0
+            else
+                $ionicViewSwitcher.nextDirection('back')
+                $state.go('bag.category_slide', {'name': $scope.currentBag, id: $scope.catid - 1})
+
+]

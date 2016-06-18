@@ -25,18 +25,25 @@ angular.module('bagModule', ['ionic', 'bagModule.services', 'bagModule.controlle
           templateUrl: 'templates/bagtpl_edit.html',
           controller: 'BagTplCtrl'
             
-    .state 'bag.content', 
+    .state 'bag.content',
       url: '/:name',
       views:
-        'bag': 
+        'bag':
           templateUrl: 'templates/bag.html',
-          controller: 'BagCtrl'  
+          controller: 'BagCtrl'
+
+    .state 'bag.testcontent',
+      url: '/test/:name',
+      views:
+        'bag':
+          templateUrl: 'templates/bag_slide.html',
+          controller: 'BagCtrl'
             
     .state 'bag.edit', 
       url: '/edit/:name',
       views:
         'bag': 
-          templateUrl: 'templates/bagedit.html',
+          templateUrl: 'templates/bagtpl_edit.html',
           controller: 'BagCtrl' 
               
     .state 'bag.category', 
@@ -45,7 +52,14 @@ angular.module('bagModule', ['ionic', 'bagModule.services', 'bagModule.controlle
         'bag': 
           templateUrl: 'templates/category.html',
           controller: 'CatCtrl'
-            
+
+    .state 'bag.category_slide',
+      url: '/details_slide/:name/cat/:id',
+      views:
+        'bag':
+          templateUrl: 'templates/category_slide.html',
+          controller: 'CatSlideCtrl'
+
     .state 'bag.category_edit', 
       url: '/details_edit/:name/cat/:id',
       views:

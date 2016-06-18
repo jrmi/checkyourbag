@@ -1,0 +1,53 @@
+<ion-view ng-attr-title="{{ 'choose-your-category' | translate }}">
+  <ion-content scroll="false">
+      
+    <ion-nav-buttons side="left" >
+        <a class="button button-icon button-clear ion-ios7-arrow-back" href="#/bag/all"></a>
+    </ion-nav-buttons>
+      
+    <ion-nav-buttons side="right">
+        <button class="button  button-outline button-light" ng-click="resetBag()" translate>btn-reset</button>
+    </ion-nav-buttons>
+
+  <ion-slides  options="options" slider="data.slider">
+
+
+
+    <!-- ion-slide-page>
+      <div class="box blue"><h1>BLUE</h1></div>
+    </ion-slide-page>
+    <ion-slide-page>
+      <div class="box yellow"><h1>YELLOW</h1></div>
+    </ion-slide-page>
+    <ion-slide-page>
+      <div class="box pink"><h1>PINK</h1></div>
+    </ion-slide-page>
+  </ion-slides -->
+
+  <ion-slides  options="options" slider="data.slider">
+    <ion-slide-page ng-repeat="category in $storage[bagName]">
+      <div class="box"><h3>{{category.label}}</h3>
+      <ion-scroll direction="y" style="height: 500px">
+        <div class="list"  style="height: 500px">
+          <ion-checkbox ng-repeat="item in category.items" ng-model="item.checked" ng-if="item.visible" ng-change="updateCounts(bagName, catid)">{{item.label}}</ion-checkbox>
+        </div>
+      </ion-scroll>
+      </div>
+    </ion-slide-page>
+
+  </ion-slides>
+
+
+
+
+
+    <!-- ion-list>
+
+      <ion-item class="item-icon-right" ng-repeat="category in $storage[bagName]" type="item-text-wrap" href="#/bag/details/{{current_bag}}/cat/{{$index}}" ng-if="category.visible_items">
+        <h3>{{category.label}} ({{category.checked_items}}/{{category.visible_items}})</h3>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+      
+    </ion-list -->
+  </ion-content>
+</ion-view>
