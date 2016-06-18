@@ -22,10 +22,11 @@ angular.module 'bagModule.services', []
           return bag
       return null
 
-    reset: (bagId) ->
-      for cat in @get(bagId).categories
+    reset: (bag) ->
+      for cat in bag.categories
         for item in cat.items
             item.checked = false
+      @updateCounts(bag)
 
     updateCounts: (bag) ->
       bag.checked_items = 0

@@ -18,12 +18,12 @@ angular.module('bagModule', ['ionic', 'bagModule.services', 'bagModule.controlle
           templateUrl: 'templates/bagtpl.html',
           controller: 'BagTplCtrl'
 
-    .state 'bag.edit', 
-      url: '/edit/:bagId',
+    .state 'bag.listedit',
+      url: '/list_edit',
       views:
-        'bag': 
+        'bag':
           templateUrl: 'templates/bagtpl_edit.html',
-          controller: 'BagCtrl'
+          controller: 'BagTplCtrl'
 
     .state 'bag.category',
       url: '/details/:bagId/cat/:id',
@@ -47,6 +47,7 @@ angular.module('bagModule', ['ionic', 'bagModule.services', 'bagModule.controlle
     'btn-edit': 'Edit'
     'btn-add': 'Add'
     'btn-done': 'Done'
+    'btn-cancel': 'Cancel'
     'btn-reset': 'Reset'
     'btn-reset-all': 'Reset all'
     'btn-remove': 'Remove'
@@ -57,13 +58,15 @@ angular.module('bagModule', ['ionic', 'bagModule.services', 'bagModule.controlle
     'choose-visible': 'Choose visible items'
     'item-name': 'Item name'
     'bag-name': 'Bag name'
+    'bag-action-title': 'Bag action'
     'full-bag': 'Start bag'
     
   .translations 'fr',
     'btn-edit': 'Modifier'
     'btn-add': 'Ajouter'
     'btn-done': 'Fin'
-    'btn-reset': 'Recommencer'
+    'btn-cancel': 'Annuler'
+    'btn-reset': 'Réinitialiser'
     'btn-reset-all': 'Réinitialiser tout'
     'btn-remove': 'Supprimer'
     'btn-reorder': 'Réordonner'
@@ -73,6 +76,7 @@ angular.module('bagModule', ['ionic', 'bagModule.services', 'bagModule.controlle
     'choose-visible': 'Modification'
     'item-name': 'Nom'
     'bag-name': 'Nom du sac'
+    'bag-action-title': 'Actions'
     'full-bag': 'Sac complet'
   
   .registerAvailableLanguageKeys ['en', 'fr'],

@@ -1,13 +1,10 @@
 
 angular.module 'bagModule.controllers', []
 
-.controller 'BagTplCtrl', ['$scope', '$localStorage', 'BagService', '$state', '$translate',
-  ($scope, $localStorage, BagService, $state, $translate) ->
-    $scope.$storage = $localStorage
+.controller 'BagTplCtrl', ['$filter', '$scope', 'BagService', '$ionicActionSheet', '$translate',
+  ($filter, $scope, BagService, $ionicActionSheet, $translate) ->
 
     $scope.bags = BagService.all()
-
-    $scope.resetBag = BagService.reset
 
     $scope.removeBag = BagService.remove
 
@@ -16,11 +13,25 @@ angular.module 'bagModule.controllers', []
       $scope.name = ""
 
     $scope.moveBag = BagService.move
+
+    $scope.showActionSheet = (bag) ->
+      hideSheet = $ionicActionSheet.show {
+        buttons: [
+          {text: $filter('translate')('btn-reset')},
+        ],
+        titleText: $filter('translate')('bag-action-title'),
+        cancelText: $filter('translate')('btn-cancel'),
+        cancel: () ->
+          hideSheet()
+        buttonClicked: (index) ->
+          if index == 0
+            BagService.reset(bag)
+          return true
+      }
 ]
 
-.controller 'CatCtrl', ['$scope', '$localStorage', '$stateParams', 'BagService', '$state', '$ionicViewSwitcher',
-  ($scope, $localStorage, $stateParams, BagService, $state, $ionicViewSwitcher) ->
-    $scope.$storage = $localStorage
+.controller 'CatCtrl', ['$scope', '$stateParams', 'BagService', '$state', '$ionicViewSwitcher',
+  ($scope, $stateParams, BagService, $state, $ionicViewSwitcher) ->
     $scope.catid = parseInt($stateParams.id, 10)
     $scope.bag = BagService.get($stateParams.bagId)
     $scope.category = $scope.bag.categories[$scope.catid]

@@ -4,10 +4,6 @@
     </ion-nav-buttons>
 
     <ion-content>
-        <!--ion-nav-buttons side="left" >
-            <a class="button button-assertive" ng-click="$storage.$reset()" translate>btn-reset-all</a>
-        </ion-nav-buttons-->
-
 
         <ion-list show-delete="shouldShowDelete" show-reorder="shouldShowReorder">
 
@@ -29,8 +25,10 @@
         </ion-list>
 
         <div class="button-bar">
-            <a class="button" ng-click="shouldShowDelete = !shouldShowDelete">{{ 'btn-remove' | translate }}</a>
-            <a class="button" ng-click="shouldShowReorder = !shouldShowReorder">{{ 'btn-reorder' | translate }}</a>
+            <a class="button"  ng-show="!shouldShowDelete && !shouldShowReorder" ng-click="shouldShowDelete = !shouldShowDelete">{{ 'btn-remove' | translate }}</a>
+            <a class="button"  ng-show="!shouldShowDelete && !shouldShowReorder" ng-click="shouldShowReorder = !shouldShowReorder">{{ 'btn-reorder' | translate }}</a>
+            <a class="button" ng-show="shouldShowDelete" ng-click="shouldShowDelete = !shouldShowDelete">{{ 'btn-done' | translate }}</a>
+            <a class="button" ng-show="shouldShowReorder" ng-click="shouldShowReorder = !shouldShowReorder">{{ 'btn-done' | translate }}</a>
         </div>
 
     </ion-content>
