@@ -11,7 +11,7 @@
                 <ion-delete-button class="ion-minus-circled"
                                    ng-click="removeBag($index)"></ion-delete-button>
                 <h3>{{ bag.name }}</h3>
-                <ion-reorder-button class="ion-navicon" on-reorder="moveBag(bag, $fromIndex, $toIndex)"></ion-reorder-button>
+                <ion-reorder-button class="ion-arrow-move" on-reorder="moveBag(bag, $fromIndex, $toIndex)"></ion-reorder-button>
             </ion-item>
             <div class="item item-input-inset" ng-if="!shouldShowDelete && !shouldShowReorder">
                 <label class="item-input-wrapper">

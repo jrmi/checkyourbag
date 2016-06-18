@@ -51,8 +51,8 @@ angular.module 'bagModule.controllers', []
       BagService.updateCounts($scope.bag)
 
     $scope.moveItem = (item, fromIndex, toIndex) ->
-      $scope.category.splice(fromIndex, 1)
-      $scope.category.splice(toIndex, 0, item)
+      $scope.category.items.splice(fromIndex, 1)
+      $scope.category.items.splice(toIndex, 0, item)
 
     $scope.nextCategory = () ->
       if $scope.catid >= $scope.bag.categories.length - 1

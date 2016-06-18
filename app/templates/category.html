@@ -9,7 +9,7 @@
            translate>btn-edit</a>
     </ion-nav-buttons>
 
-    <ion-content on-swipe-right="previousCategory()" on-swipe-left="nextCategory()">
+    <ion-content on-swipe-right="previousCategory()" on-swipe-left="nextCategory()" has-bouncing="false">
 
         <div class="list">
             <ion-checkbox ng-repeat="item in category.items" ng-model="item.checked"
