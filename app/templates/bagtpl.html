@@ -1,13 +1,13 @@
 <ion-view ng-attr-title="{{ 'choose-your-bag' | translate }}">
-    <ion-nav-buttons side="right">
-        <a class="button button-outline button-light" href="#/bag/list_edit" translate>btn-edit</a>
+    <ion-nav-buttons side="secondary">
+        <a class="button button-icon button-clear ion-edit" ui-sref="bag.edit({bagId:bag.id})" ></a>
     </ion-nav-buttons>
     <ion-content>
 
         <ion-list can-swipe="true">
 
             <ion-item class="item-icon-right" ng-repeat="bag in bags" nav-direction="forward"
-                      type="item-text-wrap" href="#/bag/details/{{ bag.id }}/cat/0" on-hold="showActionSheet(bag)">
+                      type="item-text-wrap" ui-sref="bag.category({bagId:bag.id, id:0})" on-hold="showActionSheet(bag)">
                 <h3>{{ bag.name }} - {{ bag.checked_items }}/{{ bag.visible_items }}</h3>
                 <i class="icon ion-chevron-right icon-accessory"></i>
             </ion-item>

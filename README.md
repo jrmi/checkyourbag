@@ -16,3 +16,37 @@ TODO
 * More translation
 * Remote/cached data list with cache manifest
 * Add more data
+
+
+Installation
+============
+
+This project requires nodejs, bower and grunt
+in order to be built.
+
+1.) Install Node
+Linux Ubuntu 12.04:
+sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get update
+sudo  apt-get install nodejs
+
+Windows:
+download msi installer from web site http://nodejs.org/
+
+2.) Install bower
+Under linux run as root
+Under Windows make sure portable git is in the search path
+
+npm install -g bower
+npm install -g grunt-cli
+
+
+3.) clone project
+
+4.) build
+ cd project
+npm install # installs dependencies from package.json (build utilities)
+bower install # installs dependencies from bower.json (required libraries)
+grunt serve # run test server
+grunt build # build for a web server
+grunt release # creates zip file for Firefox OS

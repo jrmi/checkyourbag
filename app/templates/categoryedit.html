@@ -1,7 +1,7 @@
 <ion-view ng-attr-title="{{ 'choose-visible' | translate }}">
     <ion-nav-buttons side="right">
-        <a class="button button-outline button-light" nav-direction="swap"
-           href="#/bag/details/{{ bag.id }}/cat/{{ catid }}" translate>btn-done</a>
+        <a class="button button-icon button-clear ion-checkmark" nav-direction="swap"
+           ui-sref="bag.category({bagId:bag.id, id:catid})"></a>
     </ion-nav-buttons>
 
     <ion-content>
@@ -13,7 +13,7 @@
                 <ion-delete-button class="ion-minus-circled"
                                    ng-click="removeItem($index)"></ion-delete-button>
                 <h3>{{ item.label }}</h3>
-                <label class="toggle" ng-hide="shouldShowReorder">
+                <label class="toggle toggle-dark" ng-hide="shouldShowReorder">
                     <input type="checkbox" ng-model="item.visible" ng-change="updateCounts()">
 
                     <div class="track">

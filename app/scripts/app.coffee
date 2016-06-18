@@ -18,8 +18,8 @@ angular.module('bagModule', ['ionic', 'bagModule.services', 'bagModule.controlle
           templateUrl: 'templates/bagtpl.html',
           controller: 'BagTplCtrl'
 
-    .state 'bag.listedit',
-      url: '/list_edit',
+    .state 'bag.edit',
+      url: '/edit',
       views:
         'bag':
           templateUrl: 'templates/bagtpl_edit.html',

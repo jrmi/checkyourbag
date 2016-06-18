@@ -1,12 +1,11 @@
 <ion-view ng-attr-title="{{ category.label }} {{ category.checked_items }}/{{ category.visible_items }}">
 
     <ion-nav-buttons side="primary">
-        <a class="button button-icon button-clear ion-arrow-left-c" nav-direction="back" href="#/bag/all"></a>
+        <a class="button button-icon button-clear ion-chevron-left" nav-direction="back" ui-sref="bag.list"></a>
     </ion-nav-buttons>
 
     <ion-nav-buttons side="secondary">
-        <a class="button button-outline button-light" nav-direction="swap" href="#/bag/details_edit/{{ bag.id }}/cat/{{ catid }}"
-           translate>btn-edit</a>
+        <a class="button button-icon button-clear ion-edit" nav-direction="swap" ui-sref="bag.category_edit({bagId:bag.id, id:catid})"></a>
     </ion-nav-buttons>
 
     <ion-content on-swipe-right="previousCategory()" on-swipe-left="nextCategory()" has-bouncing="false">

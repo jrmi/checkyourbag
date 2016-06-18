@@ -9,8 +9,9 @@ angular.module 'bagModule.controllers', []
     $scope.removeBag = BagService.remove
 
     $scope.newBag = (name) ->
-      BagService.new(name)
-      $scope.name = ""
+      if name
+        BagService.new(name)
+        $scope.name = ""
 
     $scope.moveBag = BagService.move
 
@@ -44,11 +45,12 @@ angular.module 'bagModule.controllers', []
       BagService.updateCounts($scope.bag)
 
     $scope.newItem = (name) ->
-      $scope.category.items.push
-        label: name
-        checked: false
-        visible: true
-      BagService.updateCounts($scope.bag)
+      if name
+        $scope.category.items.push
+          label: name
+          checked: false
+          visible: true
+        BagService.updateCounts($scope.bag)
 
     $scope.moveItem = (item, fromIndex, toIndex) ->
       $scope.category.items.splice(fromIndex, 1)
