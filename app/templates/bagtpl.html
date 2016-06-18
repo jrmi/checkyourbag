@@ -1,17 +1,22 @@
-<ion-view ng-attr-title="{{'choose-your-bag' | translate}}">
-  <ion-content>
+<ion-view ng-attr-title="{{ 'choose-your-bag' | translate }}">
     <ion-nav-buttons side="right">
-      <a class="button button-outline button-light" href="/index.html#/bag/list_edit" translate>btn-edit</a>
+        <a class="button button-outline button-light" href="#/bag/list_edit" translate>btn-edit</a>
     </ion-nav-buttons>
-      
-    <ion-list>
-    
-      <ion-item class="item-icon-right" ng-repeat="bag in $storage.tpl"  nav-direction="enter" type="item-text-wrap" href="#/bag/details_slide/{{bag.id}}/cat/{{$index}}">
-        <h3>{{bag.name}}</h3>
-        <i class="icon ion-chevron-right icon-accessory"></i>
-      </ion-item>
-      
-    </ion-list>
-      
-  </ion-content>
+    <ion-content>
+
+        <ion-list can-swipe="true">
+
+            <ion-item class="item-icon-right" ng-repeat="bag in bags" nav-direction="forward"
+                      type="item-text-wrap" href="#/bag/details/{{ bag.id }}/cat/0">
+                <h3>{{ bag.name }} - {{ bag.checked_items }}/{{ bag.visible_items }}</h3>
+                <i class="icon ion-chevron-right icon-accessory"></i>
+                <ion-option-button class="button-positive"
+                                   ng-click="resetBag(bag.id)" translate>
+                    btn-reset
+                </ion-option-button>
+            </ion-item>
+
+        </ion-list>
+
+    </ion-content>
 </ion-view>

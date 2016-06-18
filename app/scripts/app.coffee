@@ -17,51 +17,23 @@ angular.module('bagModule', ['ionic', 'bagModule.services', 'bagModule.controlle
         'bag': 
           templateUrl: 'templates/bagtpl.html',
           controller: 'BagTplCtrl'
-            
-    .state 'bag.listedit', 
-      url: '/list_edit',
+
+    .state 'bag.edit', 
+      url: '/edit/:bagId',
       views:
         'bag': 
           templateUrl: 'templates/bagtpl_edit.html',
-          controller: 'BagTplCtrl'
-            
-    .state 'bag.content',
-      url: '/:name',
-      views:
-        'bag':
-          templateUrl: 'templates/bag.html',
           controller: 'BagCtrl'
 
-    .state 'bag.testcontent',
-      url: '/test/:name',
+    .state 'bag.category',
+      url: '/details/:bagId/cat/:id',
       views:
         'bag':
-          templateUrl: 'templates/bag_slide.html',
-          controller: 'BagCtrl'
-            
-    .state 'bag.edit', 
-      url: '/edit/:name',
-      views:
-        'bag': 
-          templateUrl: 'templates/bagtpl_edit.html',
-          controller: 'BagCtrl' 
-              
-    .state 'bag.category', 
-      url: '/details/:name/cat/:id',
-      views:
-        'bag': 
           templateUrl: 'templates/category.html',
           controller: 'CatCtrl'
 
-    .state 'bag.category_slide',
-      url: '/details_slide/:name/cat/:id',
-      views:
-        'bag':
-          templateUrl: 'templates/category_slide.html',
-          controller: 'CatSlideCtrl'
-
     .state 'bag.category_edit', 
-      url: '/details_edit/:name/cat/:id',
+      url: '/details_edit/:bagId/cat/:id',
       views:
         'bag': 
           templateUrl: 'templates/categoryedit.html',
