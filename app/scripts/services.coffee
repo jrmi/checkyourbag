@@ -105,8 +105,22 @@ angular.module 'bagModule.services', []
 
     }
 
-    if not $localStorage.bags?
+    # migrate previous data structure. Remove in long time.
+    if $localStorage.tpl? and not $localStorage.bags?
+      bags = []
+      for baga in $localStorage.tpl
+        oldBag = $localStorage['bag__' + baga.id]
+        newBag = {}
+        newBag.id = baga.id
+        newBag.name = baga.name
+        newBag.categories = oldBag
+        service.updateCounts(newBag)
+        bags.push(newBag)
 
+      $localStorage.bags = bags
+
+
+    if not $localStorage.bags?
       $localStorage.bags = []
       $translate('full-bag').then (translation) ->
         service.new(translation)
