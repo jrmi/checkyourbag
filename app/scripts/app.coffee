@@ -2,7 +2,7 @@ angular.module('bagModule', ['ionic', 'bagModule.services', 'bagModule.controlle
 
 .config ['$stateProvider', '$urlRouterProvider', '$compileProvider', '$translateProvider', ($stateProvider, $urlRouterProvider, $compileProvider, $translateProvider) ->
     
-  $compileProvider.aHrefSanitizationWhitelist /^\s*(app|https?|ftp|mailto|chrome-extension):/
+  $compileProvider.aHrefSanitizationWhitelist /^\s*(app|https?|ftp|mailto|chrome-extension|blob):/
     
   $stateProvider
 
@@ -60,6 +60,7 @@ angular.module('bagModule', ['ionic', 'bagModule.services', 'bagModule.controlle
     'bag-name': 'Bag name'
     'bag-action-title': 'Bag action'
     'full-bag': 'Start bag'
+    'label-import-file': 'Import a file'
     
   .translations 'fr',
     'btn-edit': 'Modifier'
@@ -78,6 +79,7 @@ angular.module('bagModule', ['ionic', 'bagModule.services', 'bagModule.controlle
     'bag-name': 'Nom du sac'
     'bag-action-title': 'Actions'
     'full-bag': 'Sac complet'
+    'label-import-file': 'Importer un fichier'
   
   .registerAvailableLanguageKeys ['en', 'fr'],
     'en_US': 'en'

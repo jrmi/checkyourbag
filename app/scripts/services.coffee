@@ -1,21 +1,20 @@
-
-
-getUniqueId = () ->
-  dateObject = new Date()
-  idp = Math.floor(Math.random() * 1000000000)
-  uniqueId =
-    dateObject.getFullYear() + '' +
-      dateObject.getMonth() + '' +
-      dateObject.getDate() + '' +
-      dateObject.getTime() + '' + idp
-
-  return uniqueId
-
 angular.module 'bagModule.services', []
 .factory 'BagService', ['$q', '$http', '$localStorage', '$translate',
   ($q, $http, $localStorage, $translate) ->
 
     service = {
+    getUniqueId: () ->
+      dateObject = new Date()
+      idp = Math.floor(Math.random() * 1000000000)
+      uniqueId =
+        dateObject.getFullYear() + '' +
+          dateObject.getMonth() + '' +
+          dateObject.getDate() + '' +
+          dateObject.getTime() + '' + idp
+
+      return uniqueId
+
+
     get: (bagId) ->
       for bag in $localStorage.bags
         if bag.id == bagId
@@ -60,9 +59,12 @@ angular.module 'bagModule.services', []
     all: () ->
       return $localStorage.bags
 
+    add: (bag) ->
+      $localStorage.bags.push(bag)
+
     new: (name) ->
       newBag = {}
-      newBag.id = getUniqueId()
+      newBag.id = @getUniqueId()
       newBag.name = name
       newBag.categories = []
       $localStorage.bags.push(newBag)
@@ -78,7 +80,6 @@ angular.module 'bagModule.services', []
 
     _loadcat: (data) ->
       for cat in data.categories
-        cat.uid = getUniqueId()
         cat.checked_items = 0
         cat.visible_items = cat.items.length
         for it in cat.items

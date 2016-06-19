@@ -1,8 +1,8 @@
 
 angular.module 'bagModule.controllers', []
 
-.controller 'BagTplCtrl', ['$filter', '$scope', 'BagService', '$ionicActionSheet', '$translate',
-  ($filter, $scope, BagService, $ionicActionSheet, $translate) ->
+.controller 'BagTplCtrl', ['$filter', '$scope', 'BagService', '$ionicActionSheet', '$window',
+  ($filter, $scope, BagService, $ionicActionSheet, $window) ->
 
     $scope.bags = BagService.all()
 
@@ -29,8 +29,30 @@ angular.module 'bagModule.controllers', []
             BagService.reset(bag)
           return true
       }
-]
 
+    json2Dld = (content) ->
+      data = JSON.stringify(content)
+      blob = new $window.Blob [data], {'type': 'application/json'}
+      url = $window.URL.createObjectURL(blob)
+      return url
+
+    for bag in $scope.bags
+      bag.dld_url = json2Dld(bag)
+
+    $scope.loadBag = (files) ->
+      fr = new FileReader()
+
+      fr.onload = (e) ->
+        bag = JSON.parse(e.target.result)
+        bag.id = BagService.getUniqueId()
+
+        BagService.add(bag)
+        # Needed as we ar called outside of angular
+        $scope.$apply()
+
+      fr.readAsText(files[0])
+
+]
 .controller 'CatCtrl', ['$scope', '$stateParams', 'BagService', '$state', '$ionicViewSwitcher',
   ($scope, $stateParams, BagService, $state, $ionicViewSwitcher) ->
     $scope.catid = parseInt($stateParams.id, 10)

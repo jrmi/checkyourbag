@@ -1,4 +1,4 @@
-<ion-view ng-attr-title="{{ 'edit-your-bags' | translate }}">
+<ion-view id="bagedit" ng-attr-title="{{ 'edit-your-bags' | translate }}">
     <ion-nav-buttons side="secondary">
         <a class="button button-icon button-clear ion-checkmark" ui-sref="bag.list"></a>
     </ion-nav-buttons>
@@ -7,27 +7,43 @@
 
         <ion-list show-delete="shouldShowDelete" show-reorder="shouldShowReorder">
 
-            <ion-item class="item-icon-right" ng-repeat="bag in bags" type="item-text-wrap">
+            <ion-item class="item-button-right fix-pad" ng-repeat="bag in bags" type="item-text-wrap">
                 <ion-delete-button class="ion-minus-circled"
                                    ng-click="removeBag($index)"></ion-delete-button>
-                <h3>{{ bag.name }}</h3>
-                <ion-reorder-button class="ion-arrow-move" on-reorder="moveBag(bag, $fromIndex, $toIndex)"></ion-reorder-button>
+                <input type="text" ng-attr-placeholder="{{ 'bag-name' | translate }}" ng-model="bag.name">
+                <!--a class="button button-positive" ng-if="!shouldShowDelete && !shouldShowReorder"
+                        ng-href="{{ bag.dld_url }}" download="saveBag_{{ bag.id }}.json">
+                    <i class="icon ion-ios-download-outline"></i>
+                </a-->
+                <ion-reorder-button class="ion-arrow-move"
+                                    on-reorder="moveBag(bag, $fromIndex, $toIndex)"></ion-reorder-button>
             </ion-item>
-            <div class="item item-input-inset" ng-if="!shouldShowDelete && !shouldShowReorder">
+            <ion-item class="item-input-inset" ng-if="!shouldShowDelete && !shouldShowReorder">
                 <label class="item-input-wrapper">
                     <input type="text" ng-attr-placeholder="{{ 'bag-name' | translate }}" ng-model="name">
                 </label>
-                <button class="button button-icon ion-plus-round" ng-click="newBag(name)" >
+                <button class="button button-positive" ng-click="newBag(name)">
+                    <i class="icon ion-plus-round"></i>
                 </button>
-            </div>
+            </ion-item>
+
+            <!--ion-item ng-if="!shouldShowDelete && !shouldShowReorder">
+                <span translate>label-import-file</span>
+                <input type="file" id="input" onchange="angular.element(this).scope().loadBag(this.files)">
+
+            </ion-item-->
 
         </ion-list>
 
         <div class="button-bar">
-            <a class="button"  ng-show="!shouldShowDelete && !shouldShowReorder" ng-click="shouldShowDelete = !shouldShowDelete">{{ 'btn-remove' | translate }}</a>
-            <a class="button"  ng-show="!shouldShowDelete && !shouldShowReorder" ng-click="shouldShowReorder = !shouldShowReorder">{{ 'btn-reorder' | translate }}</a>
-            <a class="button" ng-show="shouldShowDelete" ng-click="shouldShowDelete = !shouldShowDelete">{{ 'btn-done' | translate }}</a>
-            <a class="button" ng-show="shouldShowReorder" ng-click="shouldShowReorder = !shouldShowReorder">{{ 'btn-done' | translate }}</a>
+            <a class="button" ng-show="!shouldShowDelete && !shouldShowReorder"
+               ng-click="shouldShowDelete = !shouldShowDelete">{{ 'btn-remove' | translate }}</a>
+            <a class="button" ng-show="!shouldShowDelete && !shouldShowReorder"
+               ng-click="shouldShowReorder = !shouldShowReorder">{{ 'btn-reorder' | translate }}</a>
+            <a class="button" ng-show="shouldShowDelete"
+               ng-click="shouldShowDelete = !shouldShowDelete">{{ 'btn-done' | translate }}</a>
+            <a class="button" ng-show="shouldShowReorder"
+               ng-click="shouldShowReorder = !shouldShowReorder">{{ 'btn-done' | translate }}</a>
         </div>
 
     </ion-content>
